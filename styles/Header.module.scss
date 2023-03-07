@@ -12,7 +12,9 @@
         padding: $desktop-padding;
     }
     .logo{
+        font-family: var(--bigJohnPro-font);
         font-size: 2rem;
+        font-weight: 800;
         text-transform: uppercase;
         span{
             color: $tertiary-color;

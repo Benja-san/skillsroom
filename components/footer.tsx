@@ -2,7 +2,13 @@ import Link from "next/link"
 import { Oxygen } from 'next/font/google'
 import styles from '@/styles/Footer.module.scss'
 
-const oxygen = Oxygen({ weight: "300", subsets: ["latin"] })
+const oxygen = Oxygen({ 
+    weight: "300", 
+    subsets: ["latin"],
+    variable: '--oxygen-font',
+    display: 'swap',
+    fallback: ['system-ui', 'arial', 'sans-serif']
+})
 
 export default function Footer() {
     return <footer className={`${oxygen.className} ${styles.footer} `}>
@@ -24,7 +30,7 @@ export default function Footer() {
                     </Link>
                 </li>
             </ul>
-            <div className={styles.contact}>
+            <div className={`${oxygen.variable} ${styles.contact} `}>
                 <Link href="/contact">
                     Contact
                 </Link>
