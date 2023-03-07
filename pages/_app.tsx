@@ -1,10 +1,11 @@
-import '@/styles/globals.css'
+import '@/styles/globals.scss'
 import type { AppProps } from 'next/app'
 import { Analytics } from '@vercel/analytics/react'
+import Layout from '@/components/layout'
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <>
+  return <Layout>
     <Component {...pageProps} />
     <Analytics />
-  </> 
+  </Layout> 
 }
