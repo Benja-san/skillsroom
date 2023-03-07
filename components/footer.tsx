@@ -31,9 +31,9 @@ export default function Footer() {
                 </li>
             </ul>
             <div className={`${oxygen.variable} ${styles.contact} `}>
-                <Link href="/contact">
-                    Contact
-                </Link>
+                <a href="mailto:beugnet.freelance@gmail.com?subject=About my project">
+                    Conta<span>c</span>t
+                </a>
             </div>
         </nav>
     </footer>
