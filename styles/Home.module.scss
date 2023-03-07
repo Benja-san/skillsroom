@@ -1,0 +1,107 @@
+@import './import';
+
+.section{
+    margin-bottom: $general-padding;
+    @media screen and (min-width: 768px){
+        margin-bottom: $desktop-padding;
+    }
+    &:last-of-type{
+        margin-bottom: 0;
+    }
+    h1, h2{
+        margin-bottom: 1rem;
+    }
+    h1{
+        border-bottom: 1px solid $tertiary-color;
+        span{
+            color: $tertiary-color;
+        }
+    }
+    .contact{
+        margin-top: 1rem;
+        li{
+            display: flex;
+            a{
+                margin-left: 1rem;
+            }
+            svg{
+                &:nth-of-type(2){
+                    margin-left: 8px;
+                }
+                path{
+                    fill: $secondary-color;
+                }
+            }
+            &:first-of-type{
+                margin-bottom: 1rem;
+                a{
+                    margin-left: 50px;
+                }
+            }
+        }
+    }
+    .projects{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        li{
+            margin-bottom: 1rem;
+            width: 100%;
+            @media screen and (min-width: 793px){
+                width: 340px;
+                margin-right: 1rem;
+            }
+            a{
+                position: relative;
+                display: block;
+                height: 200px;
+                @media screen and (min-width: 530px){
+                    height: 350px;
+                }
+                @media screen and (min-width: 793px){
+                    height: 200px;
+                }
+            }
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .team{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        li{
+            margin: 0 1rem 1rem 0;
+            h3{
+                margin: .5rem 0 1rem;
+            }
+            .network{
+                display: flex;
+                align-items: center;
+                li{
+                    margin-right: 1rem;
+                    a{
+                        svg{
+                            width: 30px;
+                            path{
+                                fill: $secondary-color;
+                                transition: fill .5s ease-in-out;
+                            }
+                        }
+                        &:hover{
+                            svg{
+                                path{
+                                    fill: $tertiary-color;
+                                }
+                            }
+                        }
+                    }
+                    &:last-of-type{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
