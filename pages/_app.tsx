@@ -1,10 +1,18 @@
-import '@/styles/globals.css'
+import { appWithTranslation } from 'next-i18next'
+import '@/styles/globals.scss'
 import type { AppProps } from 'next/app'
 import { Analytics } from '@vercel/analytics/react'
+import Layout from '@/components/layout'
+import Head from 'next/head'
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <>
+const App = ({ Component, pageProps }: AppProps) => {
+  return <Layout>
+    <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </Head>
     <Component {...pageProps} />
     <Analytics />
-  </> 
+  </Layout> 
 }
+
+export default appWithTranslation(App)
