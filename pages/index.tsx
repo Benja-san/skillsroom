@@ -1,3 +1,5 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 import Head from 'next/head'
 import { Oxygen } from 'next/font/google'
 import localFont from 'next/font/local'
@@ -25,27 +27,26 @@ const bigJohnPro = localFont({
 })
 
 export default function Home() {
+
+  const { t } = useTranslation('common')
+
   return (
     <>
       <Head>
-        <title>Skills Room : Home</title>
-        <meta name="description" content="Skills Room, freelance developers community working to answer every projects need. We are coming soon!" />
+        <title>Skills Room : {t('head-title-home')}</title>
+        <meta name="description" content={`${t('head-description-home')}`} />
       </Head>
       <section className={styles.section}>
         <h1 className={bigJohnPro.className} >Coming So<span>o</span>n</h1>
-        <p className={oxygen.className}>
-          Skills Room is a freelance developers community sharing their skills to answer your digital project needs. We are coming soon so stay tuned!
-        </p>
+        <p className={oxygen.className}>{t('landing-h1-subp')}</p>
       </section>
       <section className={styles.section}>
-        <h2 className={bigJohnPro.className} >Let&lsquo;s talk about your project!</h2>
-        <p className={oxygen.className}>
-          For any questions or to discuss your project, we would be glad to answer you. You can contact us now with one of those methods :
-        </p>
+        <h2 className={bigJohnPro.className} >{t('landing-contact-title')}</h2>
+        <p className={oxygen.className}>{t('landing-contact-subp')}</p>
         <ul className={`${oxygen.className} ${styles.contact}`}>
           <li>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
-            <a href="mailto:beugnet.freelance@gmail.com, margot.ballois@gmail.com?subject=About my digital project">beugnet.freelance@gmail.com</a>
+            <a href={`mailto:beugnet.freelance@gmail.com, margot.ballois@gmail.com?subject=${t('landing-contact-subject')}`}>beugnet.freelance@gmail.com</a>
           </li>
           <li>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/></svg>
@@ -55,13 +56,13 @@ export default function Home() {
         </ul>
       </section>
       <section className={styles.section}>
-        <h2 className={bigJohnPro.className} >Our latest releases</h2>
+        <h2 className={bigJohnPro.className} >{t('landing-projects-title')}</h2>
         <ul className={styles.projects}>
           <li>
             <a href="https://glucosetoujours.com/" target="_blank" >
               <Image
                 src={glucosePic}
-                alt="Project collaboration between Benjamin Beugnet Web Services and Margot Ballois for Glucose toujours"
+                alt={t('landing-project-1-alt')}
                 fill
                 object-fit="contain"
                 priority
@@ -72,7 +73,7 @@ export default function Home() {
             <a href="https://polenorddesign.com/" target="_blank" >
               <Image
                 src={poleNordDesignPic}
-                alt="Project collaboration between Benjamin Beugnet Web Services and Margot Ballois for Pole Nord Design"
+                alt={t('landing-project-2-alt')}
                 fill
                 object-fit="contain"
                 priority
@@ -83,7 +84,7 @@ export default function Home() {
             <a href="https://www.fincome.co/" target="_blank" >
               <Image
                 src={fincomePic}
-                alt="Project collaboration between Benjamin Beugnet Web Services and Margot Ballois for Fincome"
+                alt={t('landing-project-3-alt')}
                 fill
                 object-fit="contain"
                 priority
@@ -94,7 +95,7 @@ export default function Home() {
             <a href="https://www.wildcodeschool.com/" target="_blank" >
               <Image
                 src={wildCodeSchoolPic}
-                alt="Project collaboration between Benjamin Beugnet Web Services as a teacher for Wild Code School"
+                alt={t('landing-project-4-alt')}
                 fill
                 object-fit="contain"
                 priority
@@ -104,12 +105,12 @@ export default function Home() {
         </ul>
       </section>
       <section className={styles.section}>
-        <h2 className={bigJohnPro.className} >Behind Skills Room</h2>
+        <h2 className={bigJohnPro.className} >{t('landing-team-title')}</h2>
         <ul className={styles.team}>
           <li>
             <Image
               src={bbwsPic}
-              alt={"Benjamin Beugnet Web Services, Free lance web developer, digital expert and teacher"}
+              alt={t('landing-member-1-alt')}
               width={250}
             />
             <h3 className={bigJohnPro.className}>Benjamin Beugnet Web services</h3>
@@ -136,7 +137,7 @@ export default function Home() {
           <li>
             <Image
               src={mBalloisPic}
-              alt={"Margot Ballois, free lance web developer and digital expert"}
+              alt={t('landing-member-2-alt')}
               width={250}
             />
             <h3 className={bigJohnPro.className}>Margot Ballois</h3>
@@ -152,4 +153,14 @@ export default function Home() {
       </section>
     </>
   )
+}
+
+export async function getStaticProps({ locale } : any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'common'
+      ])),
+    },
+  }
 }
