@@ -1,0 +1,25 @@
+@import './../import';
+
+.svgContainer {
+  svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  @media screen and (min-width: 768px) {
+    svg {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    svg {
+      width: 160px;
+      height: 160px;
+      path {
+        fill: $secondary-color;
+      }
+    }
+  }
+}

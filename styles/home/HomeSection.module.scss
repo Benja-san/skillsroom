@@ -1,0 +1,60 @@
+.homeSectionContainer {
+  padding: 0.8rem 0;
+  @media screen and (min-width: 768px) {
+    padding: 1.5rem 0;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 47%;
+    padding: 2.5rem 0;
+  }
+
+  .header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    @media screen and (min-width: 768px) {
+      padding: 1rem 0;
+    }
+
+    h2 {
+      margin-left: 20px;
+      margin-right: 0;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .content {
+    padding: 0.5rem 0;
+    @media screen and (min-width: 768px) {
+      padding: 1rem 0;
+    }
+  }
+
+  .footer {
+    display:flex;
+    justify-content: flex-end;
+    padding: 0.8rem 0;
+    @media screen and (min-width: 768px) {
+      padding: 1.5rem 0;
+    }
+
+    a {
+      text-align: right;
+      margin-left: 1rem;
+      white-space: nowrap;
+    }
+  }
+}
+
+.homeSectionContainer:nth-of-type(even) {
+  .header {
+    flex-direction: row-reverse;
+    h2 {
+      margin-right: 20px;
+      margin-left: 0;
+    }
+  }
+}

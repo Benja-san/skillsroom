@@ -33,6 +33,12 @@ h1{
 
 h2{
   font-size: 1.5rem;
+  @media screen and (min-width: 768px) {
+    font-size: 2rem;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 2.5rem;
+  }
 }
 
 h3{
@@ -41,6 +47,13 @@ h3{
 
 p{
   color: $fourth-color;
+  line-height: 1.4;
+  @media screen and (min-width: 768px) {
+    font-size: 1.1rem;
+  }
+  @media screen and (min-width: 1024px) {
+    font-size: 1.2rem;
+  }
 }
 
 ul{

@@ -1,0 +1,11 @@
+@import '../import';
+
+.sectionsList{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-between;        
+    }
+}

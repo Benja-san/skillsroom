@@ -1,0 +1,36 @@
+{
+    "head-title-home" : "Accueil",
+    "head-description-home" : "Skills Room est une communauté de développeurs freelance ayant pour objectif de répondre aux besoins de votre projet web.",
+    "main-title" : "Bienvenue chez Skills Room !",
+    "sections" : [
+        {
+            "title" : "Commençons à travailler sur votre projet !",
+            "content" : "Skills Room a été créé pour réunir des freelances spécialisés dans le monde du numérique et du web. Cette communauté a un seul objectif : apporter une réponse adaptée à vos besoin en matière de projet numérique !",
+            "catchPhrase" : "Vous connaisez déjà vos besoins ?",
+            "buttonTitle" : "Prendre contact !",
+            "link" : "/contact",
+            "iconType" : "home"
+        },
+        {
+            "title" : "Enchantés ! Présentons-nous !",
+            "content" : "Nous nous focalisons sur vous ! Qui que vous soyez, quels que soient vos besoins en terme de développement numérique, nous trouverons la solution qui vous convient !",
+            "buttonTitle" : "En savoir +",
+            "link" : "/a-propos",
+            "iconType" : "about-us"
+        },
+        {
+            "title" : "Voyons comment réaliser votre projet",
+            "content" : "D'un simple site vitrine à une application web sur mesure, du simple conseil à une formation complète, nous vous fournissons une expertise parmi un panel de compétences dans le numérique.",
+            "buttonTitle" : "Notre expertise",
+            "link" : "#",
+            "iconType" : "your-project"
+        },
+        {
+            "title" : "Besoin de concret ? Jettez un coup d'oeil par ici !",
+            "content" : "Lorem ipsum!",
+            "buttonTitle": "Nos réalisations",
+            "link" : "/realisations",
+            "iconType" : "projects"
+        }
+    ]
+}
