@@ -5,4 +5,5 @@ export interface HomeSectionModel {
   buttonTitle: string
   link: string
   iconType: string
+  titleColoredPart: string
 }

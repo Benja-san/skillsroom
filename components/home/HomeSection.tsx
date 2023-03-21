@@ -11,17 +11,18 @@ export default function HomeSection({
   buttonTitle,
   link,
   iconType,
+  titleColoredPart
 }: HomeSectionModel) {
 
   return (
     <section className={styles.homeSectionContainer}>
       <div className={styles.header}>
         <SVGIcons type={iconType} />
-        <h2>{title}</h2>
+        <h2>{title}<span>{titleColoredPart}</span></h2>
       </div>
       <p className={styles.content}>{content}</p>
       <div className={styles.footer}>
-        {catchPhrase && <p>{catchPhrase}</p>}
+        <p>{catchPhrase}</p>
         <Link href={link}>
           <ActionLink title={buttonTitle} />
         </Link>

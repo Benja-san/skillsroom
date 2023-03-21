@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Oxygen } from "next/font/google"
 import styles from "@/styles/Footer.module.scss"
+import ActionLink from "@/components/global/ActionLink"
 
 const oxygen = Oxygen({
   weight: "300",
@@ -25,10 +26,10 @@ export default function Footer() {
             <Link href="/faq">FAQ</Link>
           </li>
         </ul>
-        <div className={`${oxygen.variable} ${styles.contact} `}>
-          <a href="mailto:beugnet.freelance@gmail.com?subject=About my project">
-            Conta<span>c</span>t
-          </a>
+        <div>
+          <Link href="mailto:beugnet.freelance@gmail.com?subject=About my project">
+            <ActionLink title="Contact" />
+          </Link>
         </div>
       </nav>
     </footer>

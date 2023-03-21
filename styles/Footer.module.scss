@@ -1,9 +1,6 @@
 @import './import';
 
 .footer{
-    position: fixed; 
-    bottom: 0;
-    left: 0;
     width: 100%;
     color: $secondary-color;
     background-color: $primary-color;
@@ -24,47 +21,6 @@
                     transition: color .5s ease-in-out;
                     &:hover{
                         color: $tertiary-color;
-                    }
-                }
-            }
-        }
-        .contact{
-            a{
-                font-family: var(--oxygen-font);
-                text-transform: uppercase;
-                font-size: 14px;
-                font-weight: 800;
-                letter-spacing: 1px;
-                position: relative;
-                span{
-                    transition: color .5s ease-in-out;
-                }
-                &::after{
-                    content: '';
-                    position: absolute;
-                    bottom: -5px;
-                    left: 0;
-                    width: 100%;
-                    height: 1px;
-                    background-color: $secondary-color;
-                }
-                &::Before{
-                    content: '';
-                    position: absolute;
-                    bottom: -5px;
-                    left: 0;
-                    width: 0;
-                    height: 1px;
-                    background-color: $tertiary-color;
-                    transition: width .5s ease-in-out;
-                    z-index:1;
-                }
-                &:hover{
-                    span{
-                        color: $tertiary-color;
-                    }
-                    &::Before{
-                        width: 100%;
                     }
                 }
             }

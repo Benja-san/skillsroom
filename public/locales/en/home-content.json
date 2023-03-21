@@ -4,33 +4,37 @@
     "main-title" : "Welcome to Skills Room!",
     "sections" : [
         {
-            "title" : "Make yourself comfortable, and let start your project!",
+            "title" : "Make yourself comfortable, and let ",
             "content" : "Skills Room has been created to group freelances specialized in the digital field! This group has one and only objective, to match your very perfect needs when it comes to your numeric business!",
             "catchPhrase" : "Already know what you need?",
             "buttonTitle" : "Get in touch!",
             "link" : "/contact",
-            "iconType" : "home"
+            "iconType" : "home",
+            "titleColoredPart" : "start your project!"
         },
         {
-            "title" : "Nice to meet you ! Let’s introduce ourselves!",
+            "title" : "Nice to meet you ! Let’s ",
             "content" : "Keeping freedom and global mobility to focus on your very needs! Wherever you are, whatever you need when it comes to IT development!",
             "buttonTitle" : "More about us",
             "link" : "/about-us",
-            "iconType" : "about-us"
+            "iconType" : "about-us",
+            "titleColoredPart" : "introduce ourselves!"
         },
         {
-            "title" : "Now, let see how we can fulfill your project!",
+            "title" : "Now, let see how we can fulfill ",
             "content" : "From a showroom website to a large architecture, from any advice to a complete training. We provide expertise among a large amount of fields in IT.",
             "buttonTitle" : "Our expertise",
             "link" : "/#",
-            "iconType" : "your-project"
+            "iconType" : "your-project",
+            "titleColoredPart" : "your project!"
         },
         {
-            "title" : "Need some examples? Just take a look there!",
+            "title" : "Need some examples? Just ",
             "content" : "Lorem ipsum!",
             "buttonTitle": "Our projects",
             "link" : "/our-projects",
-            "iconType" : "projects"
+            "iconType" : "projects",
+            "titleColoredPart" : "take a look there!"
         }
     ]
 }
