@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <>
         <h1>{t("main-title")}</h1>
-        <div className={styles.sectionsList}>
+        <ul className={styles.sectionsList}>
           {Object.values(t("sections", { returnObjects: true })).map(
             (section: HomeSectionModel, index: number) => {
               return (
@@ -33,7 +33,7 @@ export default function Home() {
               )
             }
           )}
-        </div>
+        </ul>
       </>
     </>
   )
