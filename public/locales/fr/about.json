@@ -1,0 +1,23 @@
+{
+  "headTitle" : "A propos de Skills Room",
+  "headDescription" : "Communauté de développeurs web dédiée à la création de sites web et d'applications de pointe répondant aux besoins uniques de nos clients",
+  "mainTitle" : "A propos de Skills Room",
+  "section-1" : {
+    "title" : "Analyser et développer vos projets...",
+    "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt interdum augue a consequat. Duis viverra ex ac justo posuere, vel suscipit mi dictum. Aenean varius dolor quis metus pharetra suscipit. Pellentesque nulla orci, blandit id augue at, accumsan fringilla metus. Morbi vitae enim scelerisque, mollis nisl ut, venenatis libero. Aenean tempor varius dui nec mollis. Suspendisse potenti. Proin eget tempus felis. Pellentesque eget sem at dolor posuere dignissim nec et tortor. Cras sagittis leo eros, a dapibus mauris eleifend sed. Mauris imperdiet pulvinar lobortis. Aliquam erat volutpat. Maecenas in ligula justo. Donec a molestie justo, eu pulvinar ante."
+  },
+  "section-2" : {
+    "title" : "Pour chaque besoin de votre entreprise...",
+    "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt interdum augue a consequat. Duis viverra ex ac justo posuere, vel suscipit mi dictum. Aenean varius dolor quis metus pharetra suscipit. Pellentesque nulla orci, blandit id augue at, accumsan fringilla metus. Morbi vitae enim scelerisque, mollis nisl ut, venenatis libero. Aenean tempor varius dui nec mollis. Suspendisse potenti. Proin eget tempus felis. Pellentesque eget sem at dolor posuere dignissim nec et tortor. Cras sagittis leo eros, a dapibus mauris eleifend sed. Mauris imperdiet pulvinar lobortis. Aliquam erat volutpat. Maecenas in ligula justo. Donec a molestie justo, eu pulvinar ante."
+  },
+  "section-3" : {
+    "title" : "Création de partenariats solides à l'échelle mondiale..."
+  },
+  "section-4" : {
+    "title" : "Et permettre aux entreprises locales d'entrer dans le secteur du numérique"
+  },
+  "section-5" : {
+    "title" : "Rencontrez l'équipe",
+    "content" : "Que ce soit pour votre projet ou pour rejoindre l'équipe, nous serions ravis de répondre à toutes vos questions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus, turpis non condimentum fermentum."
+  }
+}

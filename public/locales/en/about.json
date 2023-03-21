@@ -1,0 +1,23 @@
+{
+  "headTitle" : "About Skills Room",
+  "headDescription" : "Web developers community dedicated to creating cutting-edge websites and applications that meet the unique needs of our clients",
+  "mainTitle" : "About Us",
+  "section-1" : {
+    "title" : "To scale and develop your projects...",
+    "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt interdum augue a consequat. Duis viverra ex ac justo posuere, vel suscipit mi dictum. Aenean varius dolor quis metus pharetra suscipit. Pellentesque nulla orci, blandit id augue at, accumsan fringilla metus. Morbi vitae enim scelerisque, mollis nisl ut, venenatis libero. Aenean tempor varius dui nec mollis. Suspendisse potenti. Proin eget tempus felis. Pellentesque eget sem at dolor posuere dignissim nec et tortor. Cras sagittis leo eros, a dapibus mauris eleifend sed. Mauris imperdiet pulvinar lobortis. Aliquam erat volutpat. Maecenas in ligula justo. Donec a molestie justo, eu pulvinar ante."
+  },
+  "section-2" : {
+    "title" : "To your every business need...",
+    "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt interdum augue a consequat. Duis viverra ex ac justo posuere, vel suscipit mi dictum. Aenean varius dolor quis metus pharetra suscipit. Pellentesque nulla orci, blandit id augue at, accumsan fringilla metus. Morbi vitae enim scelerisque, mollis nisl ut, venenatis libero. Aenean tempor varius dui nec mollis. Suspendisse potenti. Proin eget tempus felis. Pellentesque eget sem at dolor posuere dignissim nec et tortor. Cras sagittis leo eros, a dapibus mauris eleifend sed. Mauris imperdiet pulvinar lobortis. Aliquam erat volutpat. Maecenas in ligula justo. Donec a molestie justo, eu pulvinar ante."
+  },
+  "section-3" : {
+    "title" : "Building strong partnerships globally..."
+  },
+  "section-4" : {
+    "title" : "And empowering local companies to reach digital markets"
+  },
+  "section-5" : {
+    "title" : "Meet the Team",
+    "content" : "Whether for your project or to join the team, we’d be glad to answer any of your questions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus, turpis non condimentum fermentum."
+  }
+}
