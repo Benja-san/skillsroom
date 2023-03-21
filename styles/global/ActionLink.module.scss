@@ -29,10 +29,6 @@
     &::Before{
         width: 100%;
     }
-    span {
-      color: $tertiary-color;
-      transition: color .5s ease-in-out;
-    }
   }
 
   @media screen and (min-width: 768px) {
