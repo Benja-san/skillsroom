@@ -8,6 +8,9 @@
     color: $secondary-color;
     background-color: $primary-color;
     padding: $general-padding;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     @media screen and (min-width: 768px){
         padding: $desktop-padding;
     }
@@ -19,5 +22,8 @@
         span{
             color: $tertiary-color;
         }
+    }
+    .menu{
+        @include burger-menu;
     }
   }

@@ -1,0 +1,35 @@
+@import './../import';
+
+.svgContainer {
+  svg {
+    width: 80px;
+    height: 80px;
+  }
+
+  @media screen and (min-width: 768px) {
+    svg {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    min-width: 160px;
+    height: 160px;
+    display:flex;
+    align-items: center;
+    svg {
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      path {
+        fill: $secondary-color;
+        -webkit-transition: fill 0.5s ease-in-out;
+        -moz-transition: fill 0.5s ease-in-out;
+        -o-transition: fill 0.5s ease-in-out;
+        transition: fill 0.5s ease-in-out;
+      }
+    }
+  }
+}
