@@ -5,8 +5,10 @@
     background-color: $primary-color;
     padding: $general-padding;
     margin-top: $general-top-space;
-    height: calc(100vh - #{$general-top-space + $general-bottom-space});
     overflow: auto;
+    h1, h2, h3 {
+        font-family: var(--bigJohnPro-font);
+    }
     /* width */
     &::-webkit-scrollbar {
         width: 5px;
@@ -31,6 +33,5 @@
     @media screen and (min-width: 768px){
         padding: $desktop-padding;
         margin-top: $desktop-top-space;
-        height: calc(100vh - #{$desktop-top-space + $desktop-bottom-space});
     }
 }

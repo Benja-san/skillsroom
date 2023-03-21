@@ -11,3 +11,23 @@ $general-bottom-space: 84px;
 $desktop-padding: 3rem;
 $desktop-top-space: 134px;
 $desktop-bottom-space: 116px;
+
+@mixin burger-menu {
+    display: flex;
+    .burger{
+        svg{
+            width: 25px;
+            height: 25px;
+            rect{
+                transition: fill .5s ease-in-out;
+            }
+        }
+        &:hover, &.active{
+            svg{
+                rect:nth-of-type(2n){
+                    fill: $tertiary-color;
+                }
+            }
+        }
+    }
+}
