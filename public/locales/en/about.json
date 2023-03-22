@@ -8,7 +8,7 @@
   },
   "section-2" : {
     "title" : "To your every business need...",
-    "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt interdum augue a consequat. Duis viverra ex ac justo posuere, vel suscipit mi dictum. Aenean varius dolor quis metus pharetra suscipit. Pellentesque nulla orci, blandit id augue at, accumsan fringilla metus. Morbi vitae enim scelerisque, mollis nisl ut, venenatis libero. Aenean tempor varius dui nec mollis. Suspendisse potenti. Proin eget tempus felis. Pellentesque eget sem at dolor posuere dignissim nec et tortor. Cras sagittis leo eros, a dapibus mauris eleifend sed. Mauris imperdiet pulvinar lobortis. Aliquam erat volutpat. Maecenas in ligula justo. Donec a molestie justo, eu pulvinar ante."
+    "content" : "With expertise in different stacks, our developer's team brings the perfect combination of front-end and back-end development to the table. But that's not all - with exceptional project management skills, they'll ensure that your project stays on track and meets all of your needs. From wireframes to deployment, our web developers have got you covered. So why wait? Let's bring your project to the next level together!"
   },
   "section-3" : {
     "title" : "Building strong partnerships globally..."
@@ -18,6 +18,12 @@
   },
   "section-5" : {
     "title" : "Meet the Team",
-    "content" : "Whether for your project or to join the team, we’d be glad to answer any of your questions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus, turpis non condimentum fermentum."
+    "content" : "Whether for your project or to join the team, we’d be glad to answer any of your questions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus, turpis non condimentum fermentum.",
+    "contactSubTitle": "contact",
+    "socialNetworksSubTitle": "Follow me on :",
+    "reviewsTitle": "reviews",
+    "expertiseSubTitle": "Expertise",
+    "passionsSubTitle": "Passions",
+    "latestReviewsSubTitle": "Latest Reviews"
   }
 }

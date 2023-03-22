@@ -1,0 +1,19 @@
+@import "../import";
+
+.sectionContainer {
+  padding: $section-padding-mobile 0;
+  @media screen and (min-width: 768px) {
+    padding: $section-padding-tablet 0;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: $section-padding-desktop 0;
+  }
+
+  .imageContainer {
+    width: 100%;
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}

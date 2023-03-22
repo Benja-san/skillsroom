@@ -20,4 +20,9 @@ export const textWithLetterColored = (text: string) => {
   )
 }
 
+export const phoneMask = (phone: number) => {
+  const phoneToString = phone.toString()
+  return phoneToString.replace(/(.{3})/g,"$1 ")
+}
+
 export default {textWithLetterColored}
