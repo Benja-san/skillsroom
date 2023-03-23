@@ -1,4 +1,5 @@
 import Image from "next/image"
+import styles from "@/styles/global/IconWithText.module.scss"
 
 type Props = {
   imgSrc: string
@@ -6,9 +7,9 @@ type Props = {
 }
 
 export default function IconWithText({ imgSrc, title }: Props) {
-  console.log(imgSrc)
+
   return (
-    <figure>
+    <figure className={styles.container}>
       <Image
         width={20}
         height={20}
