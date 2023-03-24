@@ -1,4 +1,4 @@
-import styles from "@/styles/home/SVGIcons.module.scss"
+import styles from "@/styles/global/SVGIcons.module.scss"
 import HomeIcon from "@/public/icons/around_home.svg"
 import AboutUsIcon from "@/public/icons/about_us.svg"
 import YourProjectIcon from "@/public/icons/your_project.svg"

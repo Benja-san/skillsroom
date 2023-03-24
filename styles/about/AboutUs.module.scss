@@ -17,3 +17,21 @@
     }
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .teamContainer {
+    display: flex;
+    justify-content: space-between;
+  
+    .descriptionContainer {
+      width: calc(55% - $section-padding-desktop);
+      max-height: 100vh;
+    }
+
+    .membersList {
+      width: calc(45% - $section-padding-desktop);
+      max-height: 100vh;
+      overflow-y: scroll;
+    }
+  }
+}

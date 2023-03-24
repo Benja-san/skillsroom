@@ -33,21 +33,25 @@ export default function AboutUs() {
       <section className={styles.sectionContainer}>
         <h2>{t("section-4.title")}</h2>
       </section>
-      <section className={styles.sectionContainer}>
-        <h2>{t("section-5.title")}</h2>
-        <div className={styles.imageContainer}>
-          <Image src={teamPicture} alt="Skills Room team picture" />
+      <section className={`${styles.sectionContainer} ${styles.teamContainer}`}>
+        <div className={styles.descriptionContainer}>
+          <h2>{t("section-5.title")}</h2>
+          <div className={styles.imageContainer}>
+            <Image src={teamPicture} alt="Skills Room team picture" />
+          </div>
+          <p>{t("section-5.content")}</p>
         </div>
-        <p>{t("section-5.content")}</p>
-        {Object.values(
-          t("members", { ns: "teamMembers", returnObjects: true })
-        ).map((teamMember: TeamMemberModel, index: number) => (
-          <TeamCard
-            key={index}
-            teamMember={teamMember}
-            translationContent={teamCardTranslationContent}
-          />
-        ))}
+        <div className={styles.membersList}>
+          {Object.values(
+            t("members", { ns: "teamMembers", returnObjects: true })
+          ).map((teamMember: TeamMemberModel, index: number) => (
+            <TeamCard
+              key={index}
+              teamMember={teamMember}
+              translationContent={teamCardTranslationContent}
+            />
+          ))}
+        </div>
       </section>
     </>
   )
