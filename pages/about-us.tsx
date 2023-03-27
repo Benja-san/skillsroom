@@ -13,12 +13,7 @@ import { ProjectModel } from "@/models/ProjectModel"
 export default function AboutUs() {
   const { t } = useTranslation(["about", "teamMembers", "projects"])
   const teamCardTranslationContent = t("section-5", { returnObjects: true })
-  console.log(
-    promotedProjectsByCategory(
-      t("projects", { ns: "projects", returnObjects: true }),
-      "local"
-    )
-  )
+
   return (
     <>
       <Head>
