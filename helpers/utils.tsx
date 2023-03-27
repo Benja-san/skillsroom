@@ -1,3 +1,4 @@
+import { ProjectModel } from "@/models/ProjectModel"
 import variables from "@/styles/_export.module.scss"
 
 export const textWithLetterColored = (text: string) => {
@@ -8,7 +9,7 @@ export const textWithLetterColored = (text: string) => {
   const coloredCharacterPosition = text.lastIndexOf(coloredCharacter)
 
   const style = {
-    color: variables.tertiaryColor
+    color: variables.tertiaryColor,
   }
 
   return (
@@ -22,7 +23,16 @@ export const textWithLetterColored = (text: string) => {
 
 export const phoneMask = (phone: number) => {
   const phoneToString = phone.toString()
-  return phoneToString.replace(/(.{3})/g,"$1 ")
+  return phoneToString.replace(/(.{3})/g, "$1 ")
 }
 
-export default {textWithLetterColored}
+export const promotedProjectsByCategory = (
+  projects: Array<ProjectModel>,
+  categoryType: string
+) => {
+  // projects filtered by categoryType where categories is an array of strings and isPromoted
+
+  return projects.filter(
+    (project) => project.categories.includes(categoryType) && project.isPromoted
+  )
+}

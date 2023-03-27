@@ -16,6 +16,37 @@
       width: 100%;
     }
   }
+
+  .projectsList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: $section-padding-mobile;
+    @media screen and (min-width: 768px) {
+      padding-top: $section-padding-tablet;
+    }
+    @media screen and (min-width: 1024px) {
+      padding-top: $section-padding-desktop;
+    }
+
+    li {
+      width: 30%;
+      @media screen and (min-width: 768px) {
+        width: 25%;
+      }
+      a {
+        position : relative;
+        display: block;
+  
+        img {
+          object-fit: contain;
+          max-height: 180px; 
+          height: auto;         
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
