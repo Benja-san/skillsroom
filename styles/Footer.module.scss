@@ -10,10 +10,10 @@
     }
     nav{
         display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
+        justify-content: space-between;
+        align-items: center;
         ul{
-            display: none;
+            display: flex;
             li{  
                 a{
                     text-transform: capitalize;

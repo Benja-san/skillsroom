@@ -5,6 +5,7 @@ import Sidebar from "./sidebar"
 import { Oxygen } from "next/font/google"
 import styles from "@/styles/Layout.module.scss"
 import localFont from "next/font/local"
+import ChatButton from "./chatButton"
 
 const bigJohnPro = localFont({
   src: "../public/fonts/bjp-bold.otf",
@@ -29,6 +30,7 @@ export default function Layout({ children }: PropsWithChildren) {
       <Header setActiveMenu={setActiveMenu} />
       <Sidebar setActiveMenu={setActiveMenu} activeMenu={activeMenu} />
       <main className={`${styles.main} ${oxygen.className} ${bigJohnPro.variable}`}>{children}</main>
+      <ChatButton />
       <Footer />
     </>
   )
