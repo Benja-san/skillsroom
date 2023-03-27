@@ -2,8 +2,6 @@
 import { useState } from 'react'
 import styles from "@/styles/ChatButton.module.scss"
 
-//Explein how to create a web site with typescript and next.js
-
 enum Creator {
     Me = 0,
     Bot = 1
