@@ -19,7 +19,7 @@ export default function Home() {
         <ul className={styles.sectionsList}>
           {Object.values(t("sections", { returnObjects: true })).map(
             (section: HomeSectionModel, index: number) => {
-              return (
+              return console.log(section), (
                 <HomeSection
                   key={index}
                   title={section.title}

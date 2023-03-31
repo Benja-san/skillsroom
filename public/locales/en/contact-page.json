@@ -1,0 +1,161 @@
+{
+  "headTitle" : "Contact us",
+  "headDescription" : "Contact our expert team for tailored web development services. Get a free consultation today and turn your digital vision into reality. Call or fill out our form now.",
+  "title" : "How can we help you?",
+  "introduction": "Get in touch with our expert web development team today. Contact us for a free consultation and let us help you turn your digital vision into reality. We offer a full range of web development services tailored to your unique needs. Fill out the form or call us to learn more.",
+  "inputs": [
+    {
+      "name": "firstname",
+      "label": "First name",
+      "placeholder": "Your first name",
+      "type": "text",
+      "isRequired": true,
+      "minLength": "1",
+      "maxLength": "20",
+      "pattern": "/^[A-Za-z]+$/i"
+    },
+    {
+      "name": "lastname",
+      "label": "Last name",
+      "placeholder": "Your last name",
+      "type": "text",
+      "isRequired": true,
+      "minLength": "1",
+      "maxLength": "20",
+      "pattern": "/^[A-Za-z]+$/i"
+    },
+    {
+      "name": "email",
+      "label": "Email",
+      "placeholder": "Your@email.address",
+      "type": "email",
+      "isRequired": true,
+      "minLength": "5",
+      "maxLength": "50",
+      "pattern" : "/^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$/g"
+    },
+    {
+      "name": "phone",
+      "label": "Phone number",
+      "placeholder": "Your phone number",
+      "type": "number",
+      "isRequired": false,
+      "minLength": "9",
+      "maxLength": "15",
+      "pattern": "/^[0-9]+$/i"
+    },
+    {
+      "name": "country",
+      "label": "Country",
+      "placeholder": "Your country",
+      "type": "select",
+      "options": [
+        {
+          "value": "belgium",
+          "label": "Belgium"
+        },
+        {
+          "value": "canada",
+          "label": "Canada"
+        },
+        {
+          "value": "france",
+          "label": "France"
+        },
+        {
+          "value": "germany",
+          "label": "Germany"
+        },
+        {
+          "value": "italie",
+          "label": "Italy"
+        },
+        {
+          "value": "luxembourg",
+          "label": "Luxembourg"
+        },
+        {
+          "value": "portugal",
+          "label": "Portugal"
+        },
+        {
+          "value": "spain",
+          "label": "Spain"
+        },
+        {
+          "value": "swiss",
+          "label": "Swiss"
+        },
+        {
+          "value": "united-kingdom",
+          "label": "United Kingdom"
+        },
+        {
+          "value": "united-states",
+          "label": "United States"
+        }
+      ],
+      "isRequired": true,
+      "minLength": "1",
+      "maxLength": "50",
+      "pattern": "/^[A-Za-z]+$/i"
+    },
+    {
+      "name": "companyName",
+      "label": "Company name",
+      "placeholder": "Your company name",
+      "type": "text",
+      "isRequired": false,
+      "minLength": "1",
+      "maxLength": "50",
+      "pattern": "/[\\w\\[\\]`!@#$%\\^&*()={}:;<>+'-]*/"
+    },
+    {
+      "name": "status",
+      "label": "Your status",
+      "placeholder": "Your role",
+      "type": "text",
+      "isRequired": false,
+      "minLength": "1",
+      "maxLength": "50",
+      "pattern": "/^[A-Za-z]+$/i"
+    },
+    {
+      "name": "subject",
+      "label": "Subject",
+      "placeholder": "Your purpose",
+      "type": "text",
+      "isRequired": true,
+      "minLength": "1",
+      "maxLength": "80",
+      "pattern": "/[\\w\\[\\]`!@#$%\\^&*()={}:;<>+'-]*/"
+    },
+    {
+      "name": "message",
+      "label": "Message",
+      "placeholder": "Your message here",
+      "type": "textarea",
+      "isRequired": true,
+      "minLength": "1",
+      "maxLength": "5000",
+      "pattern": "/[\\w\\[\\]`!@#$%\\^&*()={}:;<>+'-]*/"
+    }
+  ],
+  "termsOfUseAgreement": "I accept the terms of use of SKILLS ROOM politics about my data. If you want to know more about the subject or remove all information from our database, please refer to the politics section.",
+  "mandatoryFieldsTitle": "Mandatory fields",
+  "contactButton": "Get in touch",
+  "section-1": {
+    "title": "SKILLS ROOM contact informations",
+    "introduction": "Located in France, we are working remotely on a global level, for this purpose there are many ways to reach us. Here are all the information you need, feel free to take the media your the most comfortable with to contact us directly.",
+    "reachUsTitle": "To reach us :",
+    "reachUsContent": "You can contact us in French & in English.",
+    "openingHoursTitle": "Opening hours :",
+    "openingHoursContent": "As a French based company our opening hours are based on the UTC +1 Time Zone.",
+    "openingHoursMtoFTitle": "Monday to Friday :",
+    "openingHoursSaturdayTitle": "Saturday :",
+    "openingHoursMtoF": "AM 08.00 - PM 06.00",
+    "openingHoursSaturday": "AM 09.00 - AM 12.00",
+    "geographicalTitle": "Geographical location :",
+    "geographicalContent": "SKILLS ROOM is based in Wasquehal among the Lille metropole in Haut-De-France Aera, France."
+  }
+}
