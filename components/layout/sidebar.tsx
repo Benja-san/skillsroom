@@ -1,18 +1,8 @@
-import styles from "@/styles/Sidebar.module.scss"
-import localFont from "next/font/local"
+import styles from "@/styles/layout/Sidebar.module.scss"
 import Link from "next/link"
 
-const bigJohnPro = localFont({
-  src: "../public/fonts/bjp-bold.otf",
-  variable: "--bigJohnPro-font",
-  display: "swap",
-  fallback: ["system-ui", "arial", "sans-serif"],
-})
 
-export default function Sidebar({ activeMenu, setActiveMenu }: any) {
-  function toggleMenu() {
-    setActiveMenu(false)
-  }
+export default function Sidebar({ activeMenu, onClick, font }: any) {
 
   return (
     <nav
@@ -20,7 +10,7 @@ export default function Sidebar({ activeMenu, setActiveMenu }: any) {
     >
       <div className={`${styles.menu}`}>
         <button
-          onClick={toggleMenu}
+          onClick={onClick}
           className={`${styles.burger} ${styles.active}`}
           type="button"
         >
@@ -38,9 +28,9 @@ export default function Sidebar({ activeMenu, setActiveMenu }: any) {
           </svg>
         </button>
       </div>
-      <ul className={`${styles.linksContainer} ${bigJohnPro.className}`}>
+      <ul className={`${styles.linksContainer} ${font.className}`}>
         <li className={styles.linkContainer}>
-          <Link href="/home">
+          <Link href="/">
             <div className={styles.link}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

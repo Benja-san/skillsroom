@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import styles from "@/styles/ChatButton.module.scss"
+import styles from "@/styles/layout/ChatButton.module.scss"
 
 enum Creator {
     Me = 0,

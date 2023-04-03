@@ -1,19 +1,10 @@
 import Link from "next/link"
-import { Oxygen } from "next/font/google"
-import styles from "@/styles/Footer.module.scss"
+import styles from "@/styles/layout/Footer.module.scss"
 import ActionLink from "@/components/global/ActionLink"
 
-const oxygen = Oxygen({
-  weight: "300",
-  subsets: ["latin"],
-  variable: "--oxygen-font",
-  display: "swap",
-  fallback: ["system-ui", "arial", "sans-serif"],
-})
-
-export default function Footer() {
+export default function Footer({font } : any) {
   return (
-    <footer className={`${oxygen.className} ${styles.footer} `}>
+    <footer className={`${font.className} ${styles.footer} `}>
       <nav>
         <ul>
           <li>
