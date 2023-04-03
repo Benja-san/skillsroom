@@ -1,30 +1,52 @@
 import { InputFieldModel } from "@/models/InputFieldModel"
-import { useForm } from "react-hook-form"
+import { FieldError } from "react-hook-form"
 import styles from "@/styles/global/InputField.module.scss"
 
-export default function InputField(inputField: InputFieldModel) {
-  const { register } = useForm()
+type Props = {
+  inputField: InputFieldModel
+  register: any
+  error?: FieldError
+  errorMessages: { [key: string]: string }
+}
+
+export default function InputField({
+  inputField,
+  register,
+  error,
+  errorMessages,
+}: Props) {
+  console.log(error)
+  const selectValidation = (value: string) => {
+    const arrayOfOptionsValue = inputField.options?.map(
+      (option) => option.value
+    )
+    return arrayOfOptionsValue?.includes(value)
+  }
 
   const inputDisplay = (inputType: string) => {
     switch (inputType) {
       case "select":
         return (
-          <select
-            id={inputField.name}
-            required={inputField.isRequired}
-            {...register(inputField.name, {
-              required: inputField.isRequired,
-              minLength: inputField.minLength,
-              maxLength: inputField.maxLength,
-              pattern: inputField.pattern,
-            })}
-          >
-            {inputField.options?.map((option, index) => (
-              <option key={index} value={option.value}>
-                {option.label}
-              </option>
-            ))}
-          </select>
+          <div>
+            <select
+              id={inputField.name}
+              {...register(inputField.name, {
+                required: inputField.isRequired,
+                minLength: inputField.minLength,
+                maxLength: inputField.maxLength,
+                validate: (value: string) => selectValidation(value),
+              })}
+            >
+              {inputField.options?.map((option, index) => (
+                <option key={index} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+            {error && error.type === "validate" && (
+              <p className="error">{errorMessages.incorrectSelectValue}</p>
+            )}
+          </div>
         )
       case "textarea":
         return (
@@ -33,8 +55,9 @@ export default function InputField(inputField: InputFieldModel) {
             placeholder={inputField.placeholder}
             {...register(inputField.name, {
               required: inputField.isRequired,
-              minLength: 2,
-              maxLength: 20,
+              minLength: inputField.minLength,
+              maxLength: inputField.maxLength,
+              pattern: inputField.pattern,
             })}
           />
         )
@@ -48,7 +71,7 @@ export default function InputField(inputField: InputFieldModel) {
               required: inputField.isRequired,
               minLength: inputField.minLength,
               maxLength: inputField.maxLength,
-              pattern: inputField.pattern,
+              pattern: new RegExp(inputField.pattern),
             })}
           />
         )
@@ -56,11 +79,34 @@ export default function InputField(inputField: InputFieldModel) {
   }
 
   return (
-    <div className={styles.inputFieldContainer}>
-      <label htmlFor={inputField.name}>
-        {inputField.label} {inputField.isRequired && "*"}
-      </label>
-      {inputDisplay(inputField.type)}
+    <div className={styles.inputField}>
+      <div className={styles.inputFieldContainer}>
+        <label htmlFor={inputField.name}>
+          {inputField.label} {inputField.isRequired && "*"}
+        </label>
+        {inputDisplay(inputField.type)}
+      </div>
+
+      {error && error.type === "required" && (
+        <p className={styles.error}>{errorMessages.required}</p>
+      )}
+      {error && inputField.type === "email" && error.type === "pattern" && (
+        <p className={styles.error}>{errorMessages.email}</p>
+      )}
+      {error && inputField.type === "phone" && error.type === "pattern" && (
+        <p className="error">{errorMessages.phone}</p>
+      )}
+      {error && error.type === "minLength" && (
+        <p className={styles.error}>{errorMessages.minLength}</p>
+      )}
+      {error && error.type === "maxLength" && (
+        <p className={styles.error}>{errorMessages.maxLength}</p>
+      )}
+      {error &&
+        error.type === "pattern" &&
+        inputField.name === ("firstname" || "lastname" || "status") && (
+          <p className={styles.error}>{errorMessages.onlyLetters}</p>
+        )}
     </div>
   )
 }

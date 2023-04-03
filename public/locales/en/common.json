@@ -1,17 +1,11 @@
 {
-    "head-title-home" : "Home",
-    "head-description-home" : "Skills Room, freelance developers community working to answer every projects need. We are coming soon!",
-    "landing-h1" : "Coming Soon",
-    "landing-h1-subp" : "Skills Room is a freelance developers community sharing their skills to answer your digital project needs. We are coming soon so stay tuned!",
-    "landing-contact-title" : "Let's talk about your project !",
-    "landing-contact-subp" : "For any questions or to discuss your project, we would be glad to answer you. You can contact us now with one of those methods :",
-    "landing-projects-title" : "Our latest releases",
-    "landing-project-1-alt" : "Project collaboration between Benjamin Beugnet Web Services and Margot Ballois for Glucose toujours",
-    "landing-project-2-alt" : "Project collaboration between Benjamin Beugnet Web Services and Margot Ballois for Pole Nord Design",
-    "landing-project-3-alt" : "Project collaboration between Benjamin Beugnet Web Services and Margot Ballois for Fincome",
-    "landing-project-4-alt" : "Project collaboration between Benjamin Beugnet Web Services as a teacher for Wild Code School",
-    "landing-team-title" : "Behind Skills Room",
-    "landing-member-1-alt" : "Benjamin Beugnet Web Services, Free lance web developer, digital expert and teacher",
-    "landing-member-2-alt" : "Margot Ballois, Free lance web developer and digital expert",
-    "landing-contact-subject" : "About my digital project"
+	"inputErrors" : {
+		"required": "This field is required.",
+		"email": "Please enter a valid email.",
+		"phone": "Please enter a valid phone number.",
+		"minLength": "Minimum of {{minLength}} character(s) required.",
+		"maxLength": "Maximum of {{maxLength}} characters allowed.",
+		"onlyLetters": "This field must contain only letters.",
+		"incorrectSelectValue": "Selected value is not in options array"
+	}
 }
