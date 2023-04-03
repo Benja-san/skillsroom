@@ -1,9 +1,13 @@
 import Link from "next/link"
-import localFont from 'next/font/local'
 import styles from '@/styles/layout/Header.module.scss'
+import { NextFontWithVariable } from "next/dist/compiled/@next/font"
 
+type Props = {
+    onClick: () => void
+    font: NextFontWithVariable
+  }
 
-export default function Header({onClick, font} : any) {
+export default function Header({onClick, font}: Props) {
 
     return <header className={styles.header}>
         <Link href="/" legacyBehavior>

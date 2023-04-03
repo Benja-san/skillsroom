@@ -1,9 +1,14 @@
 import styles from "@/styles/layout/Sidebar.module.scss"
+import { NextFontWithVariable } from "next/dist/compiled/@next/font"
 import Link from "next/link"
 
+type Props = {
+  activeMenu: boolean
+  onClick: () => void
+  font: NextFontWithVariable
+}
 
-export default function Sidebar({ activeMenu, onClick, font }: any) {
-
+export default function Sidebar({ activeMenu, onClick, font}: Props) {
   return (
     <nav
       className={`${styles.navigation} ${activeMenu ? styles.displayed : ""}`}
