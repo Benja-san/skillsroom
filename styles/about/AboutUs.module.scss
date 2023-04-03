@@ -1,0 +1,68 @@
+@import "../import";
+
+.sectionContainer {
+  padding: $section-padding-mobile 0;
+  @media screen and (min-width: 768px) {
+    padding: $section-padding-tablet 0;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: $section-padding-desktop 0;
+  }
+
+  .imageContainer {
+    width: 100%;
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .projectsList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: $section-padding-mobile;
+    @media screen and (min-width: 768px) {
+      padding-top: $section-padding-tablet;
+    }
+    @media screen and (min-width: 1024px) {
+      padding-top: $section-padding-desktop;
+    }
+
+    li {
+      width: 30%;
+      @media screen and (min-width: 768px) {
+        width: 25%;
+      }
+      a {
+        position : relative;
+        display: block;
+  
+        img {
+          object-fit: contain;
+          max-height: 180px; 
+          height: auto;         
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .teamContainer {
+    display: flex;
+    justify-content: space-between;
+  
+    .descriptionContainer {
+      width: calc(55% - $section-padding-desktop);
+      max-height: 100vh;
+    }
+
+    .membersList {
+      width: calc(45% - $section-padding-desktop);
+      max-height: 100vh;
+      overflow-y: scroll;
+    }
+  }
+}

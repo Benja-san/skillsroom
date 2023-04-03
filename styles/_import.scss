@@ -11,6 +11,9 @@ $general-bottom-space: 84px;
 $desktop-padding: 3rem;
 $desktop-top-space: 134px;
 $desktop-bottom-space: 116px;
+$section-padding-mobile: 1rem;
+$section-padding-tablet: 1.5rem;
+$section-padding-desktop: 2.5rem;
 
 @mixin burger-menu {
     display: flex;

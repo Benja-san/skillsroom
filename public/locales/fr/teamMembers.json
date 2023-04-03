@@ -1,0 +1,150 @@
+{
+  "members" : [
+    {
+      "companyName": "Benjamin Beugnet Web Services",
+      "firstName" : "Benjamin",
+      "lastName" : "Beugnet",
+      "email" : "beugnet.freelance@gmail.com",
+      "phone" : "+33603362846",
+      "socialNetworks" : [
+        {
+          "name" : "github",
+          "link" : "https://github.com/Benja-san"
+        },
+        {
+          "name" : "malt",
+          "link" : "https://www.malt.fr/profile/benjaminbeugnet"
+        },
+        {
+          "name" : "linkedin",
+          "link" : "https://www.linkedin.com/in/benjamin-beugnet-5b1b4a1a/"
+        },
+        {
+          "name" : "facebook",
+          "link" : "https://www.facebook.com/benjaminbeugnetws"
+        }
+      ],
+      "picture": "benjamin_beugnet_web_services.jpeg",
+      "description": "Développement web, gestion de projet et supervision, communication en anglais et en français, pédagogie",
+      "skills": [
+        {
+          "name": "Next.JS",
+          "logo": "nextjs_logo.svg"
+        },
+        {
+          "name": "Symfony",
+          "logo": "symfony_logo.svg"
+        },
+        {
+          "name": "React",
+          "logo": "react_logo.svg"
+        },
+        {
+          "name": "WordPress",
+          "logo": "wordpress_logo.svg"
+        },
+        {
+          "name": "Chef de Projet",
+          "logo": "project_lead_logo.svg"
+        },
+        {
+          "name": "Formateur",
+          "logo": "pedagogy_logo.svg"
+        }
+      ],
+      "passions": [
+        {
+          "name": "Mario Kart Conducteur fou",
+          "logo": "mario_kart_icon.svg"
+        },
+        {
+          "name": "Pokemon Lover",
+          "logo": "pokemon_icon.svg"
+        },
+        {
+          "name": "Tolkien & Pratchett Fan",
+          "logo": "book_icon.svg"
+        },
+        {
+          "name": "Voyage et Treck Addict",
+          "logo": "travel_icon.svg"
+        },
+        {
+          "name": "Adepte de Sport et Santé",
+          "logo": "sport_icon.svg"
+        }
+      ]
+    },
+    {
+      "companyName": "Margot Ballois",
+      "firstName" : "Margot",
+      "lastName" : "Ballois",
+      "email" : "margot.ballois@gmail.com",
+      "phone" : "+33669127466",
+      "socialNetworks" : [
+        {
+          "name" : "github",
+          "link" : "https://github.com/Gomar0201"
+        },
+        {
+          "name" : "malt",
+          "link" : "https://www.malt.fr/profile/margotballois"
+        },
+        {
+          "name" : "linkedin",
+          "link" : "https://www.linkedin.com/in/margot-ballois/"
+        }
+      ],
+      "picture": "margot_ballois.jpeg",
+      "description": "Développement web, gestion de projet et supervision, communication en anglais et en français.",
+      "skills": [
+        {
+          "name": "Next.JS",
+          "logo": "nextjs_logo.svg"
+        },
+        {
+          "name": "Symfony",
+          "logo": "symfony_logo.svg"
+        },
+        {
+          "name": "React",
+          "logo": "react_logo.svg"
+        },
+        {
+          "name": "WordPress",
+          "logo": "wordpress_logo.svg"
+        },
+        {
+          "name": "Gestion de projet",
+          "logo": "project_lead_logo.svg"
+        },
+        {
+          "name": "Résolveuse de problèmes",
+          "logo": "problem_solver_logo.svg"
+        }
+      ],
+      "passions": [
+        {
+          "name": "Open World gameuse fanatique",
+          "logo": "skyrim_icon.svg"
+        },
+        {
+          "name": "Potterhead",
+          "logo": "harry_potter_icon.svg"
+        },
+        {
+          "name": "Dévoreuse de thrillers et livres fantastiques",
+          "logo": "book_icon.svg"
+        },
+        {
+          "name": "Addicte de voyage et camping sauvage",
+          "logo": "travel_icon.svg"
+        },
+        {
+          "name": "Sérievore",
+          "logo": "tv_shows_icon.svg"
+        }
+      ]
+    }
+  ]
+}
