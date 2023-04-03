@@ -32,7 +32,7 @@ export default function TeamCard({ teamMember, translationContent }: Props) {
             {teamMember.firstName + " " + teamMember.lastName}
           </figcaption>
         </figure>
-        <div className={styles.contactDetails}>
+        <address className={styles.contactDetails}>
           <p className={styles.subTitle}>
             {translationContent.contactSubTitle}
           </p>
@@ -63,7 +63,7 @@ export default function TeamCard({ teamMember, translationContent }: Props) {
               </li>
             ))}
           </ul>
-        </div>
+        </address>
       </div>
       <h4>{translationContent.expertiseSubTitle}</h4>
       <p>{teamMember.description}</p>
