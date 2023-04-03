@@ -1,10 +1,11 @@
 import ActionLink from "../global/ActionLink"
 import SVGIcons from "../home/SVGIcons"
 import Link from "next/link"
+import { FunctionComponent } from "react"
 import { HomeSectionModel } from "@/models/HomeSectionModel"
 import styles from "@/styles/home/HomeSection.module.scss"
 
-export default function HomeSection({
+const HomeSection: FunctionComponent<HomeSectionModel> = ({
   title,
   content,
   catchPhrase,
@@ -12,7 +13,7 @@ export default function HomeSection({
   link,
   iconType,
   titleColoredPart,
-}: HomeSectionModel) {
+}) => {
   return (
     <li className={styles.homeSectionContainer}>
       <section>
@@ -34,3 +35,5 @@ export default function HomeSection({
     </li>
   )
 }
+
+export default HomeSection

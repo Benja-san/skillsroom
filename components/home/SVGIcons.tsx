@@ -1,10 +1,11 @@
 import styles from "@/styles/home/SVGIcons.module.scss"
+import { FunctionComponent } from "react"
 
 type Props = {
   type: string
 }
 
-export default function SVGIcons({ type }: Props) {
+const SVGIcons: FunctionComponent<Props> = ({ type }) => {
   const svgIcon = (svgType: string) => {
     switch (svgType) {
       case "home":
@@ -63,3 +64,5 @@ export default function SVGIcons({ type }: Props) {
     </div>
   )
 }
+
+export default SVGIcons

@@ -1,10 +1,11 @@
 import styles from "@/styles/global/ActionLink.module.scss"
+import { FunctionComponent } from "react"
 
 type Props = {
   title: string
 }
 
-export default function ActionLink({ title }: Props) {
+const ActionLink: FunctionComponent<Props> = ({ title }) => {
 
   const textWithLetterColored = (text : string) => {
     // Get the position of second alphanumeric character from the end of the string
@@ -23,3 +24,5 @@ export default function ActionLink({ title }: Props) {
 
   return textWithLetterColored(title)
 }
+
+export default ActionLink

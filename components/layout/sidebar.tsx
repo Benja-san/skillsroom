@@ -1,6 +1,7 @@
 import styles from "@/styles/layout/Sidebar.module.scss"
 import { NextFontWithVariable } from "next/dist/compiled/@next/font"
 import Link from "next/link"
+import { FunctionComponent } from "react"
 
 type Props = {
   activeMenu: boolean
@@ -8,7 +9,7 @@ type Props = {
   font: NextFontWithVariable
 }
 
-export default function Sidebar({ activeMenu, onClick, font}: Props) {
+const Sidebar: FunctionComponent<Props> = ({ activeMenu, onClick, font}) => {
   return (
     <nav
       className={`${styles.navigation} ${activeMenu ? styles.displayed : ""}`}
@@ -117,3 +118,5 @@ export default function Sidebar({ activeMenu, onClick, font}: Props) {
     </nav>
   )
 }
+
+export default Sidebar

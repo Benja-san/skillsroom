@@ -1,4 +1,4 @@
-import { PropsWithChildren, useState } from "react"
+import { FunctionComponent, PropsWithChildren, useState } from "react"
 import Header from "./header"
 import Footer from "./footer"
 import Sidebar from "./sidebar"
@@ -22,10 +22,10 @@ const oxygen = Oxygen({
   fallback: ["system-ui", "arial", "sans-serif"],
 })
 
-export default function Layout({ children }: PropsWithChildren) {
+const Layout: FunctionComponent<PropsWithChildren> = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState<boolean>(false)
 
-  const handleActiveMenu = () => {
+  const handleActiveMenu = () : void => {
     setActiveMenu(!activeMenu)
   }
 
@@ -48,3 +48,5 @@ export default function Layout({ children }: PropsWithChildren) {
     </>
   )
 }
+
+export default Layout

@@ -1,13 +1,14 @@
 import Link from "next/link"
 import styles from '@/styles/layout/Header.module.scss'
 import { NextFontWithVariable } from "next/dist/compiled/@next/font"
+import { FunctionComponent } from "react"
 
 type Props = {
     onClick: () => void
     font: NextFontWithVariable
   }
 
-export default function Header({onClick, font}: Props) {
+const Header: FunctionComponent<Props> = ({onClick, font}) => {
 
     return <header className={styles.header}>
         <Link href="/" legacyBehavior>
@@ -25,3 +26,5 @@ export default function Header({onClick, font}: Props) {
         </div>
     </header>
 }
+
+export default Header

@@ -2,12 +2,13 @@ import Link from "next/link"
 import styles from "@/styles/layout/Footer.module.scss"
 import ActionLink from "@/components/global/ActionLink"
 import { NextFontWithVariable } from "next/dist/compiled/@next/font"
+import { FunctionComponent } from "react"
 
 type Props = {
   font: NextFontWithVariable
 }
 
-export default function Footer({font} : Props) {
+const Footer: FunctionComponent<Props> = ({font}) => {
   return (
     <footer className={`${font.className} ${styles.footer} `}>
       <nav>
@@ -31,3 +32,5 @@ export default function Footer({font} : Props) {
     </footer>
   )
 }
+
+export default Footer
