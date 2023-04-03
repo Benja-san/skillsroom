@@ -1,0 +1,68 @@
+{
+  "projects": [
+    {
+      "name": "Glucose Toujours",
+      "slug": "glucose-toujours",
+      "logo": "benjamin_beugnet_web_services_x_margot_ballois_x_glucose_toujours.png",
+      "categories" : [
+        "global"
+      ],
+      "isPromoted": 1
+    },
+    {
+      "name": "Wild Code School",
+      "slug": "wild-code-school",
+      "logo": "benjamin_beugnet_web_services_x_wild_code_school.png",
+      "categories" : [
+        "global"
+      ],
+      "isPromoted": 1
+    },
+    {
+      "name": "Fincome",
+      "slug": "fincome",
+      "logo": "benjamin_beugnet_web_services_x_margot_ballois_x_fincome.png",
+      "categories" : [
+        "global"
+      ],
+      "isPromoted": 1
+    },
+    {
+      "name": "Pôle Nord Diagnostic",
+      "slug": "pole-nord-diagnostic",
+      "logo": "benjamin_beugnet_web_services_x_margot_ballois_x_pole_nord_diagnostic.webp",
+      "categories" : [
+        "locale"
+      ],
+      "isPromoted": 1
+    },
+    {
+      "name": "La Suite bien-être",
+      "slug": "la-suite-bien-etre",
+      "logo": "benjamin_beugnet_web_services_x_margot_ballois_x_la_suite_bien_etre.png",
+      "categories" : [
+        "locale"
+      ],
+      "isPromoted": 0
+    },
+    {
+      "name": "Pôle Nord Design",
+      "slug": "pole-nord-design",
+      "logo": "benjamin_beugnet_web_services_x_margot_ballois_x_pole_nord_design.svg",
+      "categories" : [
+        "locale"
+      ],
+      "isPromoted": 1
+    },
+    {
+      "name": "ÉM Déco",
+      "slug": "em-deco",
+      "logo": "margot_ballois_x_em_deco.jpg",
+      "categories" : [
+        "locale"
+      ],
+      "isPromoted": 1
+    }
+  ]
+
+}
