@@ -15,7 +15,6 @@ type Props = {
 const Sidebar: FunctionComponent<Props> = ({ activeMenu, onClick, font}) => {
 
   const { t } = useTranslation("home-content")
-  console.log(t("sidebar", { returnObjects: true, ns: "navigation" }))
 
   return (
     <div className={`${styles.navigationContainer} ${activeMenu ? styles.displayed : ""}`}>
