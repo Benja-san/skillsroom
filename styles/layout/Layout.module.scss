@@ -9,27 +9,6 @@
     h1, h2, h3 {
         font-family: var(--bigJohnPro-font);
     }
-    /* width */
-    &::-webkit-scrollbar {
-        width: 5px;
-    }
-    
-    /* Track */
-    &::-webkit-scrollbar-track {
-        background: $secondary-color;
-        border-radius: 25px;
-    }
-    
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-        background: $primary-color-light;
-        border-radius: 25px;
-    }
-    
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-        background: $tertiary-color;
-    }
     @media screen and (min-width: 768px){
         padding: $desktop-padding;
         margin-top: $desktop-top-space;

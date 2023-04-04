@@ -1,0 +1,38 @@
+{
+    "sidebar" :[
+        {
+            "title" : "Accueil",
+            "url" : "/"
+        },
+        {
+            "title" : "A propos",
+            "url" : "/about-us"
+        },
+        {
+            "title" : "Votre projet",
+            "url" : "/services"
+        },
+        {
+            "title" : "Réalisations",
+            "url" : "/portfolio"
+        },
+        {
+            "title" : "Contact",
+            "url" : "/contact"
+        }
+    ],
+    "footer" :[
+        {
+            "title" : "politique de confidentialité",
+            "url" : "/politics"
+        },
+        {
+            "title" : "mentions légales",
+            "url" : "/legal"
+        },
+        {
+            "title" : "faq",
+            "url" : "/faq"
+        }
+    ]
+}

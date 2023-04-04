@@ -54,7 +54,7 @@ const Sidebar: FunctionComponent<Props> = ({ activeMenu, onClick, font}) => {
           </Link>
         </li>
         <li className={styles.linkContainer}>
-          <Link href="/about">
+          <Link href="/about-us">
             <div className={styles.link}>
               <svg
                 width="24"

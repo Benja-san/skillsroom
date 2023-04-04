@@ -1,0 +1,38 @@
+{
+    "sidebar" :[
+        {
+            "title" : "Home",
+            "url" : "/"
+        },
+        {
+            "title" : "About us",
+            "url" : "/about-us"
+        },
+        {
+            "title" : "Your project",
+            "url" : "/services"
+        },
+        {
+            "title" : "Portfolio",
+            "url" : "/portfolio"
+        },
+        {
+            "title" : "Contact",
+            "url" : "/contact"
+        }
+    ],
+    "footer" :[
+        {
+            "title" : "Politics",
+            "url" : "/politics"
+        },
+        {
+            "title" : "legal",
+            "url" : "/legal"
+        },
+        {
+            "title" : "faq",
+            "url" : "/faq"
+        }
+    ]
+}
