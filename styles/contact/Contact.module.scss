@@ -1,0 +1,26 @@
+@import "../import";
+
+.contactForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+
+  .inputContainer {
+    width: 80%;
+    @media screen and (min-width: 480px) {
+      width: 45%;
+    }
+  }
+
+  .submitInput {
+    color: $secondary-color;
+    width: 100%;
+    display:flex;
+    justify-content: flex-end;
+    padding: $general-padding 0;
+    > div {
+      width: fit-content;
+    }
+  }
+}

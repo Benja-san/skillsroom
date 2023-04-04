@@ -1,9 +1,9 @@
 {
 	"inputErrors" : {
 		"required": "Ce champ est obligatoire.",
-		"email": "Veuillez entrer une adresse email valide.",
+		"email": "Adresse email invalide.",
 		"phone": "Veuillez entrer un numéro de téléphone valide.",
-		"minLength": "Un minimum de {{minLength}} caractère(s) est requis.",
+		"minLength": "Minimum de {{minLength}} caractère(s).",
 		"maxLength": "Maximum de {{maxLength}} caractères autorisé.",
 		"onlyLetters": "Ce champ peut seulement contenir des lettres.",
 		"incorrectSelectValue": "La valeur sélectionnée n'est pas dans le tableau des options"

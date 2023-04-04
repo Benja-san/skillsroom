@@ -144,6 +144,8 @@
   "termsOfUseAgreement": "I accept the terms of use of SKILLS ROOM politics about my data. If you want to know more about the subject or remove all information from our database, please refer to the politics section.",
   "mandatoryFieldsTitle": "Mandatory fields",
   "contactButton": "Get in touch",
+  "sendingSuccessMessage": "Your email has been sent! We will contact you as soon as possible.",
+  "sendingErrorMessage": "An error occured while sending your email. Please try again later, or call us directly.",
   "section-1": {
     "title": "SKILLS ROOM contact informations",
     "introduction": "Located in France, we are working remotely on a global level, for this purpose there are many ways to reach us. Here are all the information you need, feel free to take the media your the most comfortable with to contact us directly.",

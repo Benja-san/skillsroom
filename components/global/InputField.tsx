@@ -15,7 +15,7 @@ export default function InputField({
   error,
   errorMessages,
 }: Props) {
-  console.log(error)
+
   const selectValidation = (value: string) => {
     const arrayOfOptionsValue = inputField.options?.map(
       (option) => option.value
