@@ -36,7 +36,53 @@
         .menu{
             margin-top: 5px;
             justify-content: flex-end;
+            align-items: center;
             @include burger-menu;
+            .menuList{
+                margin-left: $general-padding;
+                position: relative;
+                .theme{
+                    svg{
+                        width: 20px;
+                        height: 20px;
+                        path{
+                            transition: fill .3s ease-in-out;
+                            fill: $secondary-color;
+                        }
+                    }
+                }
+                .language{
+                    color: $secondary-color;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: 1.2rem;
+                    &.active{
+                        color: $tertiary-color;
+                    }
+                }
+                .languagesContainer{
+                    position: absolute;
+                    z-index: 1;
+                    left: 0;
+                    top: 30px;
+                    width: 100%;
+                    background-color: $primary-color;
+                    display: none;
+                    &.displayed{
+                        display: block;
+                    }
+                    .languageList{
+                        a{
+                            display: block;
+                            text-transform: capitalize;
+                            font-size: .8rem;
+                            padding: .5rem .5rem .5rem 0;
+                            border-top: 1px solid $secondary-color;
+                            transition: background-color .3s ease-in-out, color .3s ease-in-out;
+                        }
+                    }
+                }
+            }
         }
         .linksContainer{
             width: 100%;
@@ -108,6 +154,34 @@
 
 @media (hover:hover) and (min-width: 768px){
     .navigation{
+        .menu{
+            .menuList{
+                .theme{
+                    &:hover{
+                        svg{
+                            path{
+                                fill: $tertiary-color;
+                            }
+                        }
+                    }
+                }
+                .language{
+                    &:hover{
+                        color: $tertiary-color;
+                    }
+                }
+                .languagesContainer{
+                    .languageList{
+                        a{
+                            &:hover{
+                                background-color: $tertiary-color;
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .linksContainer{
             .linkContainer{
                 .link{
