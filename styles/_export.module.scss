@@ -1,0 +1,10 @@
+@import "./import";
+
+:export {
+  primaryColor: $primary-color;
+  secondaryColor: $secondary-color;
+  tertiaryColor: $tertiary-color;
+  fourthColor: $fourth-color;
+  primaryColorLight: primary-color-light;
+  secondaryColorLight: $secondary-color-light;
+}

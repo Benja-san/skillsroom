@@ -1,7 +1,7 @@
 @import "../import";
 
 .homeSectionContainer {
-  padding: 0.8rem 0;
+  padding: $section-padding-mobile 0;
   &:hover {
     svg {
       width: 160px;
@@ -17,28 +17,21 @@
   }
 
   @media screen and (min-width: 768px) {
-    padding: 1.5rem 0;
+    padding: $section-padding-tablet 0;
   }
   @media screen and (min-width: 1024px) {
     width: 47%;
-    padding: 2.5rem 0;
+    padding: $section-padding-desktop 0;
   }
 
   .header {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
-    @media screen and (min-width: 768px) {
-      padding: 1rem 0;
-    }
 
     h2 {
       margin-left: 20px;
       margin-right: 0;
-      &::first-letter {
-        text-transform: uppercase;
-      }
 
       span {
         -webkit-transition: all 0.5s ease-in-out;
@@ -49,20 +42,9 @@
     }
   }
 
-  .content {
-    padding: 0.5rem 0;
-    @media screen and (min-width: 768px) {
-      padding: 1rem 0;
-    }
-  }
-
   .footer {
     display:flex;
     justify-content: space-between;
-    padding: 0.8rem 0;
-    @media screen and (min-width: 768px) {
-      padding: 1.5rem 0;
-    }
 
     a {
       text-align: right;

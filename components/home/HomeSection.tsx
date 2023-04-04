@@ -1,5 +1,5 @@
 import ActionLink from "../global/ActionLink"
-import SVGIcons from "../home/SVGIcons"
+import SVGIcons from "../global/SVGIcons"
 import Link from "next/link"
 import { FunctionComponent } from "react"
 import { HomeSectionModel } from "@/models/HomeSectionModel"

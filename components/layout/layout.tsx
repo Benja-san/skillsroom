@@ -15,7 +15,7 @@ const bigJohnPro = localFont({
 })
 
 const oxygen = Oxygen({
-  weight: "400",
+  weight: ["300", "400"],
   subsets: ["latin"],
   variable: "--oxygen-font",
   display: "swap",

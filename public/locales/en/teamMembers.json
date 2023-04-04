@@ -1,0 +1,150 @@
+{
+  "members" : [
+    {
+      "companyName": "Benjamin Beugnet Web Services",
+      "firstName" : "Benjamin",
+      "lastName" : "Beugnet",
+      "email" : "beugnet.freelance@gmail.com",
+      "phone" : "+33603362846",
+      "socialNetworks" : [
+        {
+          "name" : "github",
+          "link" : "https://github.com/Benja-san"
+        },
+        {
+          "name" : "malt",
+          "link" : "https://www.malt.fr/profile/benjaminbeugnet"
+        },
+        {
+          "name" : "linkedin",
+          "link" : "https://www.linkedin.com/in/benjamin-beugnet-5b1b4a1a/"
+        },
+        {
+          "name" : "facebook",
+          "link" : "https://www.facebook.com/benjaminbeugnetws"
+        }
+      ],
+      "picture": "benjamin_beugnet_web_services.jpg",
+      "description": "Web development, project management and supervision, English and French communication.",
+      "skills": [
+        {
+          "name": "Next.JS",
+          "logo": "nextjs_logo.svg"
+        },
+        {
+          "name": "Symfony",
+          "logo": "symfony_logo.svg"
+        },
+        {
+          "name": "React",
+          "logo": "react_logo.svg"
+        },
+        {
+          "name": "WordPress",
+          "logo": "wordpress_logo.svg"
+        },
+        {
+          "name": "Project Lead",
+          "logo": "project_lead_logo.svg"
+        },
+        {
+          "name": "Pedagogy",
+          "logo": "pedagogy_logo.svg"
+        }
+      ],
+      "passions": [
+        {
+          "name": "Mario Kart Mad Driver",
+          "logo": "mario_kart_icon.svg"
+        },
+        {
+          "name": "Pokemon Lover",
+          "logo": "pokemon_icon.svg"
+        },
+        {
+          "name": "Tolkien & Pratchett Fan",
+          "logo": "book_icon.svg"
+        },
+        {
+          "name": "Travel and Treck Addict",
+          "logo": "travel_icon.svg"
+        },
+        {
+          "name": "Wellness and sport adept",
+          "logo": "sport_icon.svg"
+        }
+      ]
+    },
+    {
+      "companyName": "Margot Ballois",
+      "firstName" : "Margot",
+      "lastName" : "Ballois",
+      "email" : "margot.ballois@gmail.com",
+      "phone" : "+33669127466",
+      "socialNetworks" : [
+        {
+          "name" : "github",
+          "link" : "https://github.com/Gomar0201"
+        },
+        {
+          "name" : "malt",
+          "link" : "https://www.malt.fr/profile/margotballois"
+        },
+        {
+          "name" : "linkedin",
+          "link" : "https://www.linkedin.com/in/margot-ballois/"
+        }
+      ],
+      "picture": "margot_ballois.jpeg",
+      "description": "Web development, project management and supervision, English and French communication and pedagogy.",
+      "skills": [
+        {
+          "name": "Next.JS",
+          "logo": "nextjs_logo.svg"
+        },
+        {
+          "name": "Symfony",
+          "logo": "symfony_logo.svg"
+        },
+        {
+          "name": "React",
+          "logo": "react_logo.svg"
+        },
+        {
+          "name": "WordPress",
+          "logo": "wordpress_logo.svg"
+        },
+        {
+          "name": "Project Lead",
+          "logo": "project_lead_logo.svg"
+        },
+        {
+          "name": "Problem Solver",
+          "logo": "problem_solver_logo.svg"
+        }
+      ],
+      "passions": [
+        {
+          "name": "Open World gamer fanatic",
+          "logo": "skyrim_icon.svg"
+        },
+        {
+          "name": "Potterhead",
+          "logo": "harry_potter_icon.svg"
+        },
+        {
+          "name": "Thriller and Fantasy books eater",
+          "logo": "book_icon.svg"
+        },
+        {
+          "name": "Travel and Wild camping Addict",
+          "logo": "travel_icon.svg"
+        },
+        {
+          "name": "Binge Watcher",
+          "logo": "tv_shows_icon.svg"
+        }
+      ]
+    }
+  ]
+}

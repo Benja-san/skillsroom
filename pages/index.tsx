@@ -1,5 +1,6 @@
 import HomeSection from "@/components/home/HomeSection"
 import { HomeSectionModel } from "@/models/HomeSectionModel"
+import { textWithLetterColored } from "@/helpers/utils"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useTranslation } from "next-i18next"
 import Head from "next/head"
@@ -15,7 +16,7 @@ const Home: FunctionComponent = () => {
         <meta name="description" content={`${t("head-description-home")}`} />
       </Head>
       <>
-        <h1>{t("main-title")}</h1>
+        <h1>{textWithLetterColored(t("main-title"))}</h1>
         <ul className={styles.sectionsList}>
           {Object.values(t("sections", { returnObjects: true })).map(
             (section: HomeSectionModel, index: number) => {
