@@ -2,6 +2,7 @@ import { useTranslation } from "next-i18next"
 import styles from "@/styles/layout/Sidebar.module.scss"
 import { NextFontWithVariable } from "next/dist/compiled/@next/font"
 import Link from "next/link"
+import {useRouter} from 'next/router';
 import { FunctionComponent } from "react"
 import SVGIcons from "../global/SVGIcons"
 import ActionLink from "../global/ActionLink"
@@ -14,7 +15,9 @@ type Props = {
 
 const Sidebar: FunctionComponent<Props> = ({ activeMenu, onClick, font}) => {
 
-  const { t } = useTranslation("home-content")
+  const { t } = useTranslation("navigation")
+  const router = useRouter()
+  let currentUrl = router.pathname
 
   return (
     <div className={`${styles.navigationContainer} ${activeMenu ? styles.displayed : ""}`}>
@@ -41,12 +44,12 @@ const Sidebar: FunctionComponent<Props> = ({ activeMenu, onClick, font}) => {
           </button>
         </div>
         <ul className={`${styles.linksContainer} ${font.className}`}>
-          {Object.values(t("sidebar", { returnObjects: true, ns:"navigation" })).map(
+          {Object.values(t("sidebar", { returnObjects: true })).map(
             (section, key) => {
               return (
                 <li onClick={onClick} key={key+1} className={styles.linkContainer}>
                   <Link href={section.url}>
-                    <div className={styles.link}>
+                    <div className={`${styles.link} ${currentUrl === section.url ? styles.active : ""}`}>
                       <SVGIcons type={section.icon} />
                       <ActionLink title={section.title} />
                     </div>

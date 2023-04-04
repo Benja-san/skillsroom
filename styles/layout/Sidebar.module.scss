@@ -47,6 +47,20 @@
                     position: relative;
                     margin-bottom: 3rem;
                     width: 100%;
+                    &.active{
+                        div:last-of-type{
+                            &::before{
+                                width: 100%;
+                            }
+                        }
+                        div:first-of-type{
+                            svg{
+                                path{
+                                    fill: $tertiary-color;
+                                }
+                            }
+                        }
+                    }
                     div:last-of-type, div:last-of-type span{
                         text-align: right;
                         font-size: 1.2rem;
