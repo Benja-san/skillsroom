@@ -4,14 +4,18 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 180px;
+    width: 280px;
     height: 100vh;
     z-index: 2;
     background-color: $primary-color;
     color: $secondary-color;
     border-left: .5px solid $fourth-color;
-    padding: 2rem;
+    padding: $general-padding;
     display: none;
+    @media screen and (min-width: 768px) {
+        padding: $desktop-padding;
+        width: 350px;
+    }
     &.displayed{
         display: block;
     }
@@ -23,46 +27,65 @@
     .linksContainer{
         width: 100%;
         margin-top: 4rem;
+        color: $secondary-color;
         .linkContainer{
             .link{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
                 position: relative;
                 margin-bottom: 3rem;
-                &::before{
-                    content: '';
-                    position: absolute;
-                    bottom: -4px;
-                    left: 0;
-                    width: 100%;
-                    height: 1px;
-                    background-color: $secondary-color;
-                }
-                svg{
-                    width: 15px;
-                    height: 15px;
-                    path{
-                        fill: $secondary-color;
-                        transition: fill .5s ease-in-out;
-                    }
-                }
-                span{
-                    font-size: 18px;
+                width: 100%;
+                div:last-of-type, div:last-of-type span{
+                    text-align: right;
+                    font-size: 1.2rem;
+                    letter-spacing: 1px;
                     text-transform: capitalize;
-                    .letterToColor{
-                        transition: color .5s ease-in-out;
+                    padding: 0;
+                    @media screen and (min-width: 768px) {
+                        font-size: 1.6rem;
                     }
                 }
-                &:hover{
-                    svg{
+                div:first-of-type{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: initial ;
+                    height: initial ;
+                    min-width: initial ;
+                    @media screen and (min-width: 768px) {
+                        top: -5px;
+                    }
+                    svg, svg *{
+                        width: 20px ;
+                        height: 20px ;
+                        min-width: 20px ;
+                        @media screen and (min-width: 768px) {
+                            width: 30px;
+                            height: 30px;
+                            min-width: 30px;
+                        }
                         path{
-                            fill: $tertiary-color;
+                            transition: fill .3s ease-in-out;
+                            fill: $secondary-color;
                         }
                     }
-                    span{
-                        .letterToColor{
-                            color: $tertiary-color;
+                }
+            }
+        }
+    }
+}
+
+
+@media (hover:hover) and (min-width: 768px){
+    .navigation{
+        .linksContainer{
+            .linkContainer{
+                .link{
+                    &:hover{
+                        div:first-of-type{
+                            svg{
+                                path{
+                                    fill: $tertiary-color;
+                                }
+                            }
                         }
                     }
                 }

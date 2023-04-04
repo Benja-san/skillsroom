@@ -20,24 +20,17 @@ body {
 body {
   color: $secondary-color;
   background-color: $primary-color-light;
-  /* width */
   &::-webkit-scrollbar {
       width: 5px;
   }
-  
-  /* Track */
   &::-webkit-scrollbar-track {
       background: $primary-color-light;
       border-radius: 25px;
   }
-  
-  /* Handle */
   &::-webkit-scrollbar-thumb {
       background: $secondary-color;
       border-radius: 25px;
   }
-    
-  /* Handle on hover */
   &::-webkit-scrollbar-thumb:hover {
       background: $tertiary-color;
   }

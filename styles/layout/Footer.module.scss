@@ -19,8 +19,21 @@
                     text-transform: capitalize;
                     margin-right: 1rem;
                     transition: color .5s ease-in-out;
-                    &:hover{
-                        color: $tertiary-color;
+                }
+            }
+        }
+    }
+}
+
+@media (hover:hover) and (min-width: 768px){
+    .footer{
+        nav{
+            ul{
+                li{
+                    a{
+                        &:hover{
+                            color: $tertiary-color;
+                        }
                     }
                 }
             }

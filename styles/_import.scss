@@ -25,10 +25,21 @@ $section-padding-desktop: 2.5rem;
                 transition: fill .5s ease-in-out;
             }
         }
-        &:hover, &.active{
+        &.active{
             svg{
                 rect:nth-of-type(2n){
                     fill: $tertiary-color;
+                }
+            }
+        }
+    }
+    @media (hover:hover) and (min-width: 768px) {
+        .burger{
+            &:hover{
+                svg{
+                    rect:nth-of-type(2n){
+                        fill: $tertiary-color;
+                    }
                 }
             }
         }

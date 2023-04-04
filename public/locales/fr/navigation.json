@@ -2,23 +2,28 @@
     "sidebar" :[
         {
             "title" : "Accueil",
-            "url" : "/"
+            "url" : "/",
+            "icon" : "home-nav"
         },
         {
             "title" : "A propos",
-            "url" : "/about-us"
+            "url" : "/about-us",
+            "icon" : "about-us-nav"
         },
         {
             "title" : "Votre projet",
-            "url" : "/services"
+            "url" : "/services",
+            "icon" : "services-nav"
         },
         {
             "title" : "Réalisations",
-            "url" : "/portfolio"
+            "url" : "/portfolio",
+            "icon" : "portfolio-nav"
         },
         {
             "title" : "Contact",
-            "url" : "/contact"
+            "url" : "/contact",
+            "icon" : "contact-nav"
         }
     ],
     "footer" :[

@@ -43,7 +43,7 @@ const Home: FunctionComponent = () => {
 export async function getStaticProps({ locale } : any) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["home-content"])),
+      ...(await serverSideTranslations(locale, ["home-content", "navigation"])),
     },
   }
 }

@@ -8,13 +8,14 @@ import TelIcon from "@/public/icons/tel.svg"
 import WhatsAppIcon from "@/public/icons/whatsapp.svg"
 import IconWithText from "../global/IconWithText"
 import styles from "@/styles/about/TeamCard.module.scss"
+import { FunctionComponent } from "react"
 
 type Props = {
   teamMember: TeamMemberModel
   translationContent: any
 }
 
-export default function TeamCard({ teamMember, translationContent }: Props) {
+const TeamCard: FunctionComponent<Props> = ({ teamMember, translationContent }) => {
   return (
     <article className={styles.teamCard}>
       <h3>{teamMember.companyName}</h3>
@@ -85,3 +86,5 @@ export default function TeamCard({ teamMember, translationContent }: Props) {
     </article>
   )
 }
+
+export default TeamCard
