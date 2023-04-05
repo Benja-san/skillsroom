@@ -9,8 +9,9 @@ import styles from "@/styles/about/AboutUs.module.scss"
 import TeamCard from "@/components/aboutUs/TeamCard"
 import { TeamMemberModel } from "@/models/TeamMemberModel"
 import { ProjectModel } from "@/models/ProjectModel"
+import { FunctionComponent } from "react"
 
-export default function AboutUs() {
+const AboutUs: FunctionComponent = () => {
   const { t } = useTranslation(["about", "teamMembers", "projects"])
   const teamCardTranslationContent = t("section-5", { returnObjects: true })
 
@@ -104,7 +105,10 @@ export async function getStaticProps({ locale }: any) {
         "about",
         "teamMembers",
         "projects",
+        "navigation"
       ])),
     },
   }
 }
+
+export default AboutUs

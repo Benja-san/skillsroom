@@ -2,19 +2,6 @@
 
 .homeSectionContainer {
   padding: $section-padding-mobile 0;
-  &:hover {
-    svg {
-      width: 160px;
-      height: 160px;
-      path {
-        fill: $tertiary-color;
-      }
-    }
-
-    h2 span {
-      color: $tertiary-color;
-    }
-  }
 
   @media screen and (min-width: 768px) {
     padding: $section-padding-tablet 0;
@@ -60,6 +47,27 @@
     h2 {
       margin-right: 20px;
       margin-left: 0;
+    }
+  }
+}
+
+@media (hover:hover) and (min-width: 1024px){
+  .homeSectionContainer {
+    &:hover{
+      svg {
+        width: 160px;
+        height: 160px;
+        path {
+          fill: $tertiary-color;
+        }
+      }
+      .header {
+        h2 {
+          span {
+            color: $tertiary-color;
+          }
+        }
+      }
     }
   }
 }

@@ -1,3 +1,12 @@
+/*
+light theme for future feature
+$primary-color: #FFFDFA;
+$secondary-color: #101820;
+$tertiary-color: #5DAB63;
+$fourth-color: rgba(16,24,32,.5);
+$primary-color-light: rgba(255,253,250,.57);
+$secondary-color-light: rgba(16,24,32,.5);
+*/
 $primary-color: #101820;
 $secondary-color: #FFFDFA;
 $tertiary-color: #FEE715;
@@ -26,10 +35,24 @@ $section-padding-desktop: 2.5rem;
                 transition: fill .5s ease-in-out;
             }
         }
-        &:hover, &.active{
+        &.active{
             svg{
                 rect:nth-of-type(2n){
                     fill: $tertiary-color;
+                }
+                rect:nth-of-type(odd){
+                    fill: $secondary-color;
+                }
+            }
+        }
+    }
+    @media (hover:hover) and (min-width: 768px) {
+        .burger{
+            &:hover{
+                svg{
+                    rect:nth-of-type(2n){
+                        fill: $tertiary-color;
+                    }
                 }
             }
         }

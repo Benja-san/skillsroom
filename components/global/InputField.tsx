@@ -37,6 +37,7 @@ export default function InputField({
                 validate: (value: string) => selectValidation(value),
               })}
             >
+              <option disabled selected value="">-- {inputField.placeholder} --</option>
               {inputField.options?.map((option, index) => (
                 <option key={index} value={option.value}>
                   {option.label}

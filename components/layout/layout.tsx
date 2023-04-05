@@ -1,13 +1,13 @@
-import { PropsWithChildren, useState } from "react"
+import { FunctionComponent, PropsWithChildren, useState } from "react"
 import Header from "./header"
 import Footer from "./footer"
 import Sidebar from "./sidebar"
 import { Oxygen } from "next/font/google"
-import styles from "@/styles/Layout.module.scss"
+import styles from "@/styles/layout/Layout.module.scss"
 import localFont from "next/font/local"
 
 const bigJohnPro = localFont({
-  src: "../public/fonts/bjp-bold.otf",
+  src: "../../public/fonts/bjp-bold.otf",
   variable: "--bigJohnPro-font",
   display: "swap",
   fallback: ["system-ui", "arial", "sans-serif"],
@@ -21,15 +21,30 @@ const oxygen = Oxygen({
   fallback: ["system-ui", "arial", "sans-serif"],
 })
 
-export default function Layout({ children }: PropsWithChildren) {
+const Layout: FunctionComponent<PropsWithChildren> = ({ children }) => {
   const [activeMenu, setActiveMenu] = useState<boolean>(false)
+
+  const handleActiveMenu = () : void => {
+    setActiveMenu(!activeMenu)
+  }
 
   return (
     <>
-      <Header setActiveMenu={setActiveMenu} />
-      <Sidebar setActiveMenu={setActiveMenu} activeMenu={activeMenu} />
+      <Header 
+        onClick={handleActiveMenu}
+        font={bigJohnPro} 
+      />
+      <Sidebar 
+        onClick={handleActiveMenu}
+        activeMenu={activeMenu} 
+        font={bigJohnPro}
+      />
       <main className={`${styles.main} ${oxygen.className} ${bigJohnPro.variable}`}>{children}</main>
-      <Footer />
+      <Footer 
+        font={oxygen}
+      />
     </>
   )
 }
+
+export default Layout

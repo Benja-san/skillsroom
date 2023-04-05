@@ -93,6 +93,10 @@
         {
           "value": "united-states",
           "label": "United States"
+        },
+        {
+          "value": "other",
+          "label": "Other"
         }
       ],
       "isRequired": true,
