@@ -62,7 +62,7 @@ const Sidebar: FunctionComponent<Props> = ({ activeMenu, onClick, font}) => {
               {currentLocale}
             </button>
             {isLanguageBoxDisplayed && (
-              <ul className={`${styles.languagesContainer}`}>
+              <ul className={styles.languagesContainer}>
                 <li className={styles.languageList}>
                   <a href={`/en${currentUrl}`}>en</a>
                 </li>
