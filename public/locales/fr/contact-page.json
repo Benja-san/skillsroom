@@ -146,6 +146,7 @@
   "contactButton": "Entrons en contact",
   "sendingSuccessMessage": "Votre email a bien été envoyé ! Nous revenons vers vous très rapidement.",
   "sendingErrorMessage": "Une erreur est survenue durant l'envoi de votre email. Merci de réessayer plus tard, ou de nous contacter directement par téléphone",
+  "sendingLoadingMessage": "Envoi de votre message...",
   "section-1": {
     "title": "SKILLS ROOM informations de contact",
     "introduction": "Basés en France, nous travaillons à distance à l'échelle mondiale. À cet effet, il existe de nombreuses façons de nous contacter. Voici toutes les informations dont vous avez besoin, n'hésitez pas à choisir le canal qui vous convient le mieux pour nous contacter directement.",

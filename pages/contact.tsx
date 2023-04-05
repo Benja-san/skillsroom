@@ -3,9 +3,11 @@ import { useTranslation } from "next-i18next"
 import Head from "next/head"
 import InputField from "@/components/global/InputField"
 import ActionLink from "@/components/global/ActionLink"
+import FeedbackBox from "@/components/global/FeedbackBox"
 import { InputFieldModel } from "@/models/InputFieldModel"
 import { ContactFormDataModel } from "@/models/ContactFormDataModel"
 import { useForm, FieldError } from "react-hook-form"
+import { textWithLetterColored } from "@/helpers/utils"
 import { useState } from "react"
 import styles from "@/styles/contact/Contact.module.scss"
 
@@ -15,13 +17,15 @@ export default function ContactPage() {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm<ContactFormDataModel>()
-  const [errorEmailSending, setErrorEmailSending] = useState(false)
-  const [successEmailSending, setSuccessEmailSending] = useState(false)
+  const [emailSendingStatus, setEmailSendingStatus] = useState<
+    "success" | "error" | "loading" | "loaded" | null
+  >(null)
+  const [submitted, setSubmitted] = useState(false)
 
   const onSubmit = (data: ContactFormDataModel) => {
-    console.log(data)
+    setSubmitted(true)
     fetch("/api/contact-form", {
       method: "POST",
       headers: {
@@ -30,14 +34,24 @@ export default function ContactPage() {
       },
       body: JSON.stringify(data),
     }).then((res) => {
-      console.log(res)
+      setEmailSendingStatus("loaded")
       if (res.status === 200) {
         reset()
-        setSuccessEmailSending(true)
+        setEmailSendingStatus("success")
       } else {
-        setErrorEmailSending(true)
+        setEmailSendingStatus("error")
       }
     })
+  }
+
+  const FeedbackBoxTitle = () => {
+    if (emailSendingStatus === "success") {
+      return t("sendingSuccessMessage")
+    } else if (emailSendingStatus === "error") {
+      return t("sendingErrorMessage")
+    } else {
+      return t("sendingLoadingMessage")
+    }
   }
 
   return (
@@ -48,38 +62,41 @@ export default function ContactPage() {
       </Head>
       {/* TODO: When PR of about page is merged, 
       add the function to color the letter at the end of the h1 title */}
-      <h1>{t("title")}</h1>
+      <h1>{textWithLetterColored(t("title"))}</h1>
       <p>{t("introduction")}</p>
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        noValidate
-        className={styles.contactForm}
-      >
-        {Object.values(t("inputs", { returnObjects: true })).map(
-          (input: InputFieldModel) => {
-            return (
-              <div className={styles.inputContainer} key={input.name}>
-                <InputField
-                  inputField={input}
-                  register={register}
-                  error={
-                    errors[input.name as keyof typeof errors] as FieldError
-                  }
-                  errorMessages={t("inputErrors", {
-                    returnObjects: true,
-                    ns: "common",
-                    minLength: input.minLength,
-                    maxLength: input.maxLength,
-                  })}
-                />
-              </div>
-            )
-          }
-        )}
-        <button type="submit" className={styles.submitInput}>
-          <ActionLink title={t("contactButton")} />
-        </button>
-      </form>
+      {!submitted && (
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          noValidate
+          className={styles.contactForm}
+        >
+          {Object.values(t("inputs", { returnObjects: true })).map(
+            (input: InputFieldModel) => {
+              return (
+                <div className={styles.inputContainer} key={input.name}>
+                  <InputField
+                    inputField={input}
+                    register={register}
+                    error={
+                      errors[input.name as keyof typeof errors] as FieldError
+                    }
+                    errorMessages={t("inputErrors", {
+                      returnObjects: true,
+                      ns: "common",
+                      minLength: input.minLength,
+                      maxLength: input.maxLength,
+                    })}
+                  />
+                </div>
+              )
+            }
+          )}
+          <button type="submit" className={styles.submitInput}>
+            <ActionLink title={t("contactButton")} />
+          </button>
+        </form>
+      )}
+      {submitted && <FeedbackBox type={emailSendingStatus} title={FeedbackBoxTitle()} />}
     </>
   )
 }
