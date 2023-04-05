@@ -44,14 +44,17 @@ const Sidebar: FunctionComponent<Props> = ({ activeMenu, onClick, font}) => {
       <div onClick={onClick} className={styles.notNavigation}></div>
       <nav className={`${styles.navigation} ${font.className}`} >
         <ul className={`${styles.menu}`}>
-
-          <li className={styles.menuList}>
-            <button className={styles.theme} type="button">
-              <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 0L9.75 6.75H16.5L15.1005 8.25H4.3005L12 0ZM13.7002 9.75H2.90025L1.5 11.25H8.25L6 18L13.7002 9.75Z" fill="#FFFDFA"/>
-              </svg>
-            </button>
-          </li>
+          
+          {/*
+            Light theme item for future feature
+            <li className={styles.menuList}>
+              <button className={styles.theme} type="button">
+                <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 0L9.75 6.75H16.5L15.1005 8.25H4.3005L12 0ZM13.7002 9.75H2.90025L1.5 11.25H8.25L6 18L13.7002 9.75Z" fill="#FFFDFA"/>
+                </svg>
+              </button>
+            </li>
+          */}
 
           <li ref={languageBox} className={styles.menuList}>
             <button 

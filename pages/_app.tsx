@@ -1,5 +1,4 @@
 import { appWithTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import "@/styles/globals.scss"
 import type { AppProps } from "next/app"
 import { Analytics } from "@vercel/analytics/react"

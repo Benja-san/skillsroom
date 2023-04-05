@@ -17,7 +17,7 @@ const Footer: FunctionComponent<Props> = ({font}) => {
   let currentUrl = router.pathname
 
   return (
-    <footer className={`${font.className} ${styles.footer} `}>
+    <footer className={`${font.className} ${styles.footer} globalFooter`}>
       <nav>
         <ul>
           {Object.values(t("footer", { returnObjects: true })).map(
