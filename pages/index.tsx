@@ -5,10 +5,10 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useTranslation } from "next-i18next"
 import Head from "next/head"
 import styles from "@/styles/home/Home.module.scss"
+import { FunctionComponent } from "react"
 
-export default function Home() {
+const Home: FunctionComponent = () => {
   const { t } = useTranslation("home-content")
-
   return (
     <>
       <Head>
@@ -40,10 +40,12 @@ export default function Home() {
   )
 }
 
-export async function getStaticProps({ locale }: any) {
+export async function getStaticProps({ locale } : any) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["home-content"])),
+      ...(await serverSideTranslations(locale, ["home-content", "navigation"])),
     },
   }
 }
+
+export default Home

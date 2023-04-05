@@ -1,12 +1,13 @@
 import Image from "next/image"
 import styles from "@/styles/global/IconWithText.module.scss"
+import { FunctionComponent } from "react"
 
 type Props = {
   imgSrc: string
   title: string
 }
 
-export default function IconWithText({ imgSrc, title }: Props) {
+const IconWithText: FunctionComponent<Props> = ({ imgSrc, title }) => {
 
   return (
     <figure className={styles.container}>
@@ -20,3 +21,5 @@ export default function IconWithText({ imgSrc, title }: Props) {
     </figure>
   )
 }
+
+export default IconWithText

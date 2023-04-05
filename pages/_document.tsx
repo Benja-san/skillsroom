@@ -1,6 +1,6 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
-export default function Document() {
+const Document = () => {
   return (
     <Html lang="en">
       <Head>
@@ -12,10 +12,12 @@ export default function Document() {
         <meta name="msapplication-TileColor" content="#101820" />
         <meta name="theme-color" content="#101820"></meta>
       </Head>
-      <body>
+      <body className="light">
         <Main />
         <NextScript />
       </body>
     </Html>
   )
 }
+
+export default Document

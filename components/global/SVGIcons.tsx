@@ -7,12 +7,18 @@ import GithubIcon from "@/public/icons/github.svg"
 import LinkedinIcon from "@/public/icons/linkedin.svg"
 import MaltIcon from "@/public/icons/malt.svg"
 import FacebookIcon from "@/public/icons/facebook.svg"
+import HomeNav from "@/public/icons/home-nav.svg"
+import AboutUsNav from "@/public/icons/about-us-nav.svg"
+import ContactNav from "@/public/icons/contact-nav.svg"
+import PortfolioNav from "@/public/icons/portfolio-nav.svg"
+import ServicesNav from "@/public/icons/services-nav.svg"
+import { FunctionComponent } from "react"
 
 type Props = {
   type: string
 }
 
-export default function SVGIcons({ type }: Props) {
+const SVGIcons: FunctionComponent<Props> = ({ type }) => {
   const svgIcon = (svgType: string) => {
     switch (svgType) {
       case "home":
@@ -31,8 +37,20 @@ export default function SVGIcons({ type }: Props) {
         return <MaltIcon />
       case "facebook":
         return <FacebookIcon />
+      case "home-nav":
+        return <HomeNav />
+      case "services-nav":
+        return <ServicesNav />
+      case "contact-nav":
+        return <ContactNav />
+      case "about-us-nav":
+        return <AboutUsNav />
+      case "portfolio-nav":
+        return <PortfolioNav />
     }
   }
 
   return <div className={styles.svgContainer}>{svgIcon(type)}</div>
 }
+
+export default SVGIcons

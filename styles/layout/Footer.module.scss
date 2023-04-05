@@ -1,0 +1,48 @@
+@import '../import';
+
+.footer{
+    width: 100%;
+    padding: $general-padding;
+    border-top: 1px solid $secondary-color;
+    @media screen and (min-width: 768px){
+        padding: $desktop-padding;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        ul{
+            display: flex;
+            flex-flow: row wrap;
+            li{
+                margin: .5rem 0;
+                &.active{
+                    a{
+                        color: $tertiary-color;
+                    }
+                }
+                a{
+                    text-transform: capitalize;
+                    margin-right: 1rem;
+                    transition: color .5s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+@media (hover:hover) and (min-width: 768px){
+    .footer{
+        nav{
+            ul{
+                li{
+                    a{
+                        &:hover{
+                            color: $tertiary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

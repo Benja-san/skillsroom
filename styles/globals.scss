@@ -20,93 +20,120 @@ body {
 body {
   color: $secondary-color;
   background-color: $primary-color;
-}
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h1{
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  &::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: $tertiary-color;
-    margin-top: 0.5rem;
+  &::-webkit-scrollbar {
+      width: 5px;
   }
-
-  @media (min-width: 768px) {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+  &::-webkit-scrollbar-track {
+      background: $primary-color-light;
+      border-radius: 25px;
   }
-  @media (min-width: 1024px) {
-    font-size: 4rem;
-    margin-bottom: 3rem;
+  &::-webkit-scrollbar-thumb {
+      background: $secondary-color;
+      border-radius: 25px;
   }
-}
-
-h2{
-  font-size: 1.5rem;
-  padding: 0.5rem 0;
-  &::first-letter {
-    text-transform: uppercase;
+  &::-webkit-scrollbar-thumb:hover {
+      background: $tertiary-color;
+  }a {
+    color: $secondary-color;
+    text-decoration: none;
   }
-  @media screen and (min-width: 768px) {
+  
+  h1{
+    color: $secondary-color;
     font-size: 2rem;
-    padding: 1rem 0;
+    margin-bottom: 1rem;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $tertiary-color;
+      margin-top: 0.5rem;
+    }
+  
+    @media (min-width: 768px) {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+    @media (min-width: 1024px) {
+      font-size: 4rem;
+      margin-bottom: 3rem;
+    }
   }
-  @media screen and (min-width: 1024px) {
-    font-size: 2.5rem;
-  }
-}
-
-h3{
-  font-size: 1.25rem;
-  padding: 0.5rem 0;
-  &::first-letter {
-    text-transform: uppercase;
-  }
-  @media screen and (min-width: 768px) {
+  
+  h2{
+    color: $secondary-color;
     font-size: 1.5rem;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+      padding: 1rem 0;
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 2.5rem;
+    }
   }
-}
-
-h4{
-  font-size: 1rem;
-  padding: 0.5rem 0;
-  &::first-letter {
-    text-transform: uppercase;
+  
+  h3{
+    color: $secondary-color;
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 1.5rem;
+      padding: 1rem 0;
+    }
   }
-  @media screen and (min-width: 768px) {
-    font-size: 1.3rem;
-    padding: 1rem 0;
+  
+  h4{
+    color: $secondary-color;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    &::first-letter {
+      text-transform: uppercase;
+    }
+    @media screen and (min-width: 768px) {
+      font-size: 1.3rem;
+      padding: 1rem 0;
+    }
   }
-}
-
-p{
-  color: $fourth-color;
-  line-height: 1.4;
-  padding: 0.5rem 0;
-  @media screen and (min-width: 768px) {
-    font-size: 1.1rem;
-    padding: 1rem 0;
+  
+  p{
+    color: $fourth-color;
+    line-height: 1.4;
+    padding: 0.5rem 0;
+    @media screen and (min-width: 768px) {
+      font-size: 1.1rem;
+      padding: 1rem 0;
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 1.2rem;
+    }
   }
-  @media screen and (min-width: 1024px) {
-    font-size: 1.2rem;
+  
+  ul{
+    list-style: none;
   }
-}
-
-ul{
-  list-style: none;
-}
-
-button{
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+  
+  button{
+    color: $secondary-color;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  input, textarea{
+    color: $secondary-color;
+  }
+  figcaption, img, label{
+    color: $fourth-color;
+  }
+  svg, svg *{
+    fill: $secondary-color;
+  }
 }

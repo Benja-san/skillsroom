@@ -1,0 +1,20 @@
+@import '../import';
+
+.main{
+    color: $secondary-color;
+    background-color: $primary-color;
+    padding: $general-padding;
+    margin-top: $general-top-space;
+    overflow: auto;
+    min-height: calc(100vh - 101px - 102px);
+    @media screen and (min-width: 768px){
+        min-height: calc(100vh - 143px - 134px)
+    }
+    h1, h2, h3 {
+        font-family: var(--bigJohnPro-font);
+    }
+    @media screen and (min-width: 768px){
+        padding: $desktop-padding;
+        margin-top: $desktop-top-space;
+    }
+}

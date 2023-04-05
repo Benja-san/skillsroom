@@ -1,26 +1,21 @@
 import Link from "next/link"
-import localFont from 'next/font/local'
-import styles from '@/styles/Header.module.scss'
+import styles from '@/styles/layout/Header.module.scss'
+import { NextFontWithVariable } from "next/dist/compiled/@next/font"
+import { FunctionComponent } from "react"
 
-const bigJohnPro = localFont({
-    src: "../public/fonts/bjp-bold.otf", 
-    variable: '--bigJohnPro-font',
-    display: 'swap',
-    fallback: ['system-ui', 'arial', 'sans-serif']
-})
+type Props = {
+    onClick: () => void
+    font: NextFontWithVariable
+  }
 
-export default function Header({setActiveMenu} : any) {
-
-    function toggleMenu() {
-        setActiveMenu(true)
-    }
+const Header: FunctionComponent<Props> = ({onClick, font}) => {
 
     return <header className={styles.header}>
         <Link href="/" legacyBehavior>
-            <a className={`${bigJohnPro.variable} ${styles.logo}`}>Sk<span>i</span>lls R<span>o</span>om</a>
+            <a className={`${styles.logo} ${font.variable}`}>Sk<span>i</span>lls R<span>o</span>om</a>
         </Link>
         <div className={styles.menu}>
-            <button onClick={toggleMenu} className={styles.burger} type="button">
+            <button onClick={onClick} className={styles.burger} type="button">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="8" height="8" fill="#FFFDFA"/>
                     <rect y="10" width="8" height="8" fill="#FFFDFA"/>
@@ -31,3 +26,5 @@ export default function Header({setActiveMenu} : any) {
         </div>
     </header>
 }
+
+export default Header

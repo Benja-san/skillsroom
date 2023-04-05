@@ -5,6 +5,9 @@
   text-transform: uppercase;
   position: relative;
   padding: 0.5rem 0 0;
+  span{
+    transition: color .3s ease-in-out;
+  }
   &::after {
     content: '';
     position: absolute;
@@ -26,11 +29,6 @@
     transition: width .5s ease-in-out;
     z-index:1;
   }
-  &:hover{
-    &::Before{
-        width: 100%;
-    }
-  }
 
   @media screen and (min-width: 768px) {
     font-size: 1rem;
@@ -39,6 +37,17 @@
   @media screen and (min-width: 1024px) {
     font-size: 1.1rem;
   }
+}
 
-
+@media (hover:hover) and (min-width: 768px){
+  .container{
+    &:hover{
+      span{
+        color: $tertiary-color;
+      }
+      &::Before{
+        width: 100%;
+      }
+    }
+  }
 }
