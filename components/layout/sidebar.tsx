@@ -3,7 +3,7 @@ import styles from "@/styles/layout/Sidebar.module.scss"
 import { NextFontWithVariable } from "next/dist/compiled/@next/font"
 import Link from "next/link"
 import {useRouter} from 'next/router';
-import { FunctionComponent, useState } from "react"
+import { FunctionComponent, useState, useRef, useEffect } from "react"
 import SVGIcons from "../global/SVGIcons"
 import ActionLink from "../global/ActionLink"
 
@@ -19,16 +19,32 @@ const Sidebar: FunctionComponent<Props> = ({ activeMenu, onClick, font}) => {
   const router = useRouter()
   let currentUrl = router.pathname
   const currentLocale = router.locale
+
+  const languageBox = useRef<any>(null)
   const [isLanguageBoxDisplayed, setIsLanguageBoxDisplayed] = useState(false)
   function toggleLanguageBox() {
     setIsLanguageBoxDisplayed(!isLanguageBoxDisplayed)
   }
+  function handleClickOutside(event: MouseEvent) {
+    if (languageBox.current && !languageBox.current.contains(event.target)) {
+      setIsLanguageBoxDisplayed(false)
+    }
+  }
+
+  useEffect(() => {
+    if(!isLanguageBoxDisplayed) return
+    document.addEventListener("click", handleClickOutside)
+    return () => {
+      document.removeEventListener("click", handleClickOutside)
+    }
+  }, [isLanguageBoxDisplayed])
 
   return (
     <div className={`${styles.navigationContainer} ${activeMenu ? styles.displayed : ""}`}>
       <div onClick={onClick} className={styles.notNavigation}></div>
       <nav className={`${styles.navigation} ${font.className}`} >
         <ul className={`${styles.menu}`}>
+
           <li className={styles.menuList}>
             <button className={styles.theme} type="button">
               <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +52,8 @@ const Sidebar: FunctionComponent<Props> = ({ activeMenu, onClick, font}) => {
               </svg>
             </button>
           </li>
-          <li className={styles.menuList}>
+
+          <li ref={languageBox} className={styles.menuList}>
             <button 
               type="button" 
               className={`${font.className} ${styles.language} ${isLanguageBoxDisplayed && styles.active}`}
@@ -44,15 +61,18 @@ const Sidebar: FunctionComponent<Props> = ({ activeMenu, onClick, font}) => {
             >
               {currentLocale}
             </button>
-            <ul className={`${styles.languagesContainer} ${isLanguageBoxDisplayed && styles.displayed}`}>
-              <li className={styles.languageList}>
-                <a href={`/en${currentUrl}`}>en</a>
-              </li>
-              <li className={styles.languageList}>
-                <a href={`/fr${currentUrl}`}>fr</a>
-              </li>
-            </ul>
+            {isLanguageBoxDisplayed && (
+              <ul className={`${styles.languagesContainer}`}>
+                <li className={styles.languageList}>
+                  <a href={`/en${currentUrl}`}>en</a>
+                </li>
+                <li className={styles.languageList}>
+                  <a href={`/fr${currentUrl}`}>fr</a>
+                </li>
+              </ul>
+            )}
           </li>
+
           <li className={styles.menuList}>
             <button
               onClick={onClick}
@@ -73,6 +93,7 @@ const Sidebar: FunctionComponent<Props> = ({ activeMenu, onClick, font}) => {
               </svg>
             </button>
           </li>
+
         </ul>
         <ul className={`${styles.linksContainer} ${font.className}`}>
           {Object.values(t("sidebar", { returnObjects: true })).map(
