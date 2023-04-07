@@ -3,6 +3,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import Head from "next/head"
 import { FunctionComponent } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { textWithLetterColored } from "@/helpers/utils"
 
 const Portfolio: FunctionComponent = () => {
@@ -21,14 +22,16 @@ const Portfolio: FunctionComponent = () => {
       <p>{t("intro")}</p>
       <section>
         <ul>
-          {sortedProjects.map((project) => (
-            <li key={project.slug}>
-              <Image 
-                src={`/projects-links-landing-page/${project.logo}`} 
-                alt={project.name}
-                width={90}
-                height={90}
-              />
+          {sortedProjects.map((project, key) => (
+            <li key={key+1}>
+              <Link href="#">
+                <Image 
+                  src={`/projects-links-landing-page/${project.logo}`} 
+                  alt={project.name}
+                  width={90}
+                  height={90}
+                />
+              </Link>
               <h2>{project.name}</h2>
               <time>{project.updatedAt}</time>
             </li>
