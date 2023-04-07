@@ -4,8 +4,15 @@
       "name": "Glucose Toujours",
       "slug": "glucose-toujours",
       "logo": "benjamin_beugnet_web_services_x_margot_ballois_x_glucose_toujours.png",
+      "updatedAt": "2023/02/01",
       "categories" : [
-        "global"
+        "global",
+        "nextjs",
+        "reactjs",
+        "symfony",
+        "design",
+        "fullypresonalized",
+        "figma"
       ],
       "isPromoted": 1
     },
@@ -13,8 +20,11 @@
       "name": "Wild Code School",
       "slug": "wild-code-school",
       "logo": "benjamin_beugnet_web_services_x_wild_code_school.png",
+      "updatedAt": "2022/09/01",
       "categories" : [
-        "global"
+        "global",
+        "teaching",
+        "symfony"
       ],
       "isPromoted": 1
     },
@@ -22,8 +32,11 @@
       "name": "Fincome",
       "slug": "fincome",
       "logo": "benjamin_beugnet_web_services_x_margot_ballois_x_fincome.png",
+      "updatedAt": "2022/11/01",
       "categories" : [
-        "global"
+        "global",
+        "reactjs",
+        "fullypersonalized"
       ],
       "isPromoted": 1
     },
@@ -31,8 +44,11 @@
       "name": "Pôle Nord Diagnostic",
       "slug": "pole-nord-diagnostic",
       "logo": "benjamin_beugnet_web_services_x_margot_ballois_x_pole_nord_diagnostic.webp",
+      "updatedAt": "2021/10/01",
       "categories" : [
-        "locale"
+        "local",
+        "cms",
+        "wordpress"
       ],
       "isPromoted": 1
     },
@@ -40,8 +56,11 @@
       "name": "La Suite bien-être",
       "slug": "la-suite-bien-etre",
       "logo": "benjamin_beugnet_web_services_x_margot_ballois_x_la_suite_bien_etre.png",
+      "updatedAt": "2021/12/01",
       "categories" : [
-        "locale"
+        "local",
+        "cms",
+        "wordpress"
       ],
       "isPromoted": 0
     },
@@ -49,8 +68,11 @@
       "name": "Pôle Nord Design",
       "slug": "pole-nord-design",
       "logo": "benjamin_beugnet_web_services_x_margot_ballois_x_pole_nord_design.svg",
+      "updatedAt": "2023/02/01",
       "categories" : [
-        "locale"
+        "local",
+        "cms",
+        "wordpress"
       ],
       "isPromoted": 1
     },
@@ -58,8 +80,11 @@
       "name": "ÉM Déco",
       "slug": "em-deco",
       "logo": "margot_ballois_x_em_deco.jpg",
+      "updatedAt": "2023/04/01",
       "categories" : [
-        "locale"
+        "local",
+        "cms",
+        "wordpress"
       ],
       "isPromoted": 1
     }
