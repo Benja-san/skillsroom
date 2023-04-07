@@ -8,11 +8,11 @@ $primary-color-light: rgba(255,253,250,.57);
 $secondary-color-light: rgba(16,24,32,.5);
 */
 $primary-color: #101820;
-$secondary-color: #FFFDFA;
-$tertiary-color: #FEE715;
-$fourth-color: #F3F3F3;
-$primary-color-light: rgba(16,24,32,.5);
-$secondary-color-light: rgba(255,253,250,.57);
+$secondary-color: #fffdfa;
+$tertiary-color: #fee715;
+$fourth-color: #f3f3f3;
+$primary-color-light: rgba(16, 24, 32, 0.5);
+$secondary-color-light: rgba(255, 253, 250, 0.57);
 $error-color: #ff726f;
 
 $general-padding: 2rem;
@@ -26,35 +26,53 @@ $section-padding-tablet: 1.5rem;
 $section-padding-desktop: 2.5rem;
 
 @mixin burger-menu {
-    display: flex;
-    .burger{
-        svg{
-            width: 25px;
-            height: 25px;
-            rect{
-                transition: fill .5s ease-in-out;
-            }
-        }
-        &.active{
-            svg{
-                rect:nth-of-type(2n){
-                    fill: $tertiary-color;
-                }
-                rect:nth-of-type(odd){
-                    fill: $secondary-color;
-                }
-            }
-        }
+  display: flex;
+  .burger {
+    svg {
+      width: 25px;
+      height: 25px;
+      rect {
+        transition: fill 0.5s ease-in-out;
+      }
     }
-    @media (hover:hover) and (min-width: 768px) {
-        .burger{
-            &:hover{
-                svg{
-                    rect:nth-of-type(2n){
-                        fill: $tertiary-color;
-                    }
-                }
-            }
+    &.active {
+      svg {
+        rect:nth-of-type(2n) {
+          fill: $tertiary-color;
         }
+        rect:nth-of-type(odd) {
+          fill: $secondary-color;
+        }
+      }
     }
+  }
+  @media (hover: hover) and (min-width: 768px) {
+    .burger {
+      &:hover {
+        svg {
+          rect:nth-of-type(2n) {
+            fill: $tertiary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin inlineIconText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 0;
+
+  svg {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    @media screen and (min-width: 768px) {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+    }
+  }
 }

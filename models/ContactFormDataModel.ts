@@ -8,4 +8,5 @@ export interface ContactFormDataModel {
   status: string
   subject: string
   message: string
+  legalAgreement: boolean
 }

@@ -2,7 +2,10 @@
   "headTitle" : "Contactez-nous",
   "headDescription" : "Contactez notre équipe d'experts pour un développement web sur mesure. Transformez votre vision en réalité dès maintenant avec une consultation gratuite. Appelez ou remplissez notre formulaire.",
   "title" : "Comment peut-on vous aider ?",
-  "introduction": "Entrez en contact avec notre équipe d'experts en développement web dès aujourd'hui. Contactez-nous pour une consultation gratuite et laissez-nous vous aider à concrétiser votre projet numérique. Nous proposons une gamme complète de services de développement web adaptés à vos besoins uniques. Remplissez le formulaire ou appelez-nous pour en savoir plus.",
+  "section-1": {
+    "title": "Ravis de faire votre connaissance !",
+    "introduction": "Entrez en contact avec notre équipe d'experts en développement web dès aujourd'hui. Contactez-nous pour une consultation gratuite et laissez-nous vous aider à concrétiser votre projet numérique. Nous proposons une gamme complète de services de développement web adaptés à vos besoins uniques. Remplissez le formulaire ou appelez-nous pour en savoir plus."
+  },
   "inputs": [
     {
       "name": "firstname",
@@ -151,7 +154,7 @@
   "sendingSuccessMessage": "Votre email a bien été envoyé ! Nous revenons vers vous très rapidement.",
   "sendingErrorMessage": "Une erreur est survenue durant l'envoi de votre email. Merci de réessayer plus tard, ou de nous contacter directement par téléphone",
   "sendingLoadingMessage": "Envoi de votre message...",
-  "section-1": {
+  "section-2": {
     "title": "SKILLS ROOM informations de contact",
     "introduction": "Basés en France, nous travaillons à distance à l'échelle mondiale. À cet effet, il existe de nombreuses façons de nous contacter. Voici toutes les informations dont vous avez besoin, n'hésitez pas à choisir le canal qui vous convient le mieux pour nous contacter directement.",
     "reachUsTitle": "Pour nous contacter :",

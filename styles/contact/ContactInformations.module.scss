@@ -1,0 +1,33 @@
+@import "../import";
+
+.subSection {
+  padding: $section-padding-mobile 0;
+}
+
+.reachUsContainer {
+  span {
+    color: $tertiary-color;
+  }
+  
+  .inlineIconText {
+    @include inlineIconText;
+    justify-content: flex-start;
+    padding : calc($section-padding-mobile/2) 0;
+    a {
+      margin-left: 10px;
+    }
+  }
+}
+
+.openingHoursSection {
+
+  .openingHoursContainer {
+    display:flex;
+    justify-content: space-between;
+    max-width: 400px;
+
+    p {
+      width: 49%;
+    }
+  }
+}

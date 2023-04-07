@@ -2,7 +2,10 @@
   "headTitle" : "Contact us",
   "headDescription" : "Contact our expert team for tailored web development services. Get a free consultation today and turn your digital vision into reality. Call or fill out our form now.",
   "title" : "How can we help you?",
-  "introduction": "Get in touch with our expert web development team today. Contact us for a free consultation and let us help you turn your digital vision into reality. We offer a full range of web development services tailored to your unique needs. Fill out the form or call us to learn more.",
+  "section-1" : {
+    "title": "Pleased to meet you!",
+    "introduction": "Get in touch with our expert web development team today. Contact us for a free consultation and let us help you turn your digital vision into reality. We offer a full range of web development services tailored to your unique needs. Fill out the form or call us to learn more."
+  },
   "inputs": [
     {
       "name": "firstname",
@@ -151,7 +154,7 @@
   "sendingSuccessMessage": "Your email has been sent! We will contact you as soon as possible.",
   "sendingErrorMessage": "An error occured while sending your email. Please try again later, or call us directly.",
   "sendingLoadingMessage": "Sending your message...",
-  "section-1": {
+  "section-2": {
     "title": "SKILLS ROOM contact informations",
     "introduction": "Located in France, we are working remotely on a global level, for this purpose there are many ways to reach us. Here are all the information you need, feel free to take the media your the most comfortable with to contact us directly.",
     "reachUsTitle": "To reach us :",

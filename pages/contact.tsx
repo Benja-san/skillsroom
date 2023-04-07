@@ -4,6 +4,8 @@ import Head from "next/head"
 import InputField from "@/components/global/InputField"
 import ActionLink from "@/components/global/ActionLink"
 import FeedbackBox from "@/components/global/FeedbackBox"
+import ContactInformations from "@/components/contact/ContactInformations"
+import LittleArrow from "@/public/icons/arrow.svg"
 import { InputFieldModel } from "@/models/InputFieldModel"
 import { ContactFormDataModel } from "@/models/ContactFormDataModel"
 import { useForm, FieldError } from "react-hook-form"
@@ -60,43 +62,57 @@ export default function ContactPage() {
         <title>Skills Room : {t("headTitle")}</title>
         <meta name="description" content={`${t("headDescription")}`} />
       </Head>
-      {/* TODO: When PR of about page is merged, 
-      add the function to color the letter at the end of the h1 title */}
       <h1>{textWithLetterColored(t("title"))}</h1>
-      <p>{t("introduction")}</p>
-      {!submitted && (
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          noValidate
-          className={styles.contactForm}
-        >
-          {Object.values(t("inputs", { returnObjects: true })).map(
-            (input: InputFieldModel) => {
-              return (
-                <div className={styles.inputContainer} key={input.name}>
-                  <InputField
-                    inputField={input}
-                    register={register}
-                    error={
-                      errors[input.name as keyof typeof errors] as FieldError
-                    }
-                    errorMessages={t("inputErrors", {
-                      returnObjects: true,
-                      ns: "common",
-                      minLength: input.minLength,
-                      maxLength: input.maxLength,
-                    })}
-                  />
+      <div className={styles.contactPage}>
+        <section className={styles.contactFormSection}>
+          <h2>{t("section-1.title")}</h2>
+          <p>{t("section-1.introduction")}</p>
+          {!submitted && (
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              noValidate
+              className={styles.contactForm}
+            >
+              {Object.values(t("inputs", { returnObjects: true })).map(
+                (input: InputFieldModel) => {
+                  return (
+                    <div className={styles.inputContainer} key={input.name}>
+                      <InputField
+                        inputField={input}
+                        register={register}
+                        error={
+                          errors[
+                            input.name as keyof typeof errors
+                          ] as FieldError
+                        }
+                        errorMessages={t("inputErrors", {
+                          returnObjects: true,
+                          ns: "common",
+                          minLength: input.minLength,
+                          maxLength: input.maxLength,
+                        })}
+                      />
+                    </div>
+                  )
+                }
+              )}
+
+              <button type="submit" className={styles.submitInput}>
+                <ActionLink title={t("contactButton")} />
+                <div className={styles.svgContainer}>
+                  <LittleArrow />
                 </div>
-              )
-            }
+              </button>
+            </form>
           )}
-          <button type="submit" className={styles.submitInput}>
-            <ActionLink title={t("contactButton")} />
-          </button>
-        </form>
-      )}
-      {submitted && <FeedbackBox type={emailSendingStatus} title={FeedbackBoxTitle()} />}
+          {submitted && (
+            <FeedbackBox type={emailSendingStatus} title={FeedbackBoxTitle()} />
+          )}
+        </section>
+        <section className={styles.contactInformations}>
+          <ContactInformations />
+        </section>
+      </div>
     </>
   )
 }
@@ -104,7 +120,11 @@ export default function ContactPage() {
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["contact-page", "common", "navigation"])),
+      ...(await serverSideTranslations(locale, [
+        "contact-page",
+        "common",
+        "navigation",
+      ])),
     },
   }
 }
