@@ -5,7 +5,6 @@ import Sidebar from "./sidebar"
 import { Oxygen } from "next/font/google"
 import styles from "@/styles/layout/Layout.module.scss"
 import localFont from "next/font/local"
-import ChatButton from "./chatButton"
 
 const bigJohnPro = localFont({
   src: "../../public/fonts/bjp-bold.otf",
@@ -41,7 +40,6 @@ const Layout: FunctionComponent<PropsWithChildren> = ({ children }) => {
         font={bigJohnPro}
       />
       <main className={`${styles.main} ${oxygen.className} ${bigJohnPro.variable}`}>{children}</main>
-      <ChatButton />
       <Footer 
         font={oxygen}
       />

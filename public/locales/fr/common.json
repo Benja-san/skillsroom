@@ -1,17 +1,11 @@
 {
-    "head-title-home" : "Accueil",
-    "head-description-home" : "Skills Room, communauté de développeurs web prêts à vous apporter la solution numérique qui vous correspond!",
-    "landing-h1" : "Comming soon !",
-    "landing-h1-subp" : "Skills Room est une communauté de développeurs web auto entrepreneurs désireux de partager leurs compétences pour vous aporter l'expertise et la solution dont vous avez besoin. Le site arrive bientôt, restez connectés!",
-    "landing-contact-title" : "Discutons ensemble de votre projet",
-    "landing-contact-subp" : "Vous avez un projet en tête ? Nous sommes disponibles pour répondre à toutes vos questions. Contactez nous dès maintenant via le support qui vous convient le mieux :",
-    "landing-projects-title" : "Nos dernières réalisations",
-    "landing-project-1-alt" : "Collaboration réalisée par Benjamin Beugnet Web Services et Margot Ballois pour Glucose toujours",
-    "landing-project-2-alt" : "Collaboration réalisée par Benjamin Beugnet Web Services et Margot Ballois pour Pole Nord Design",
-    "landing-project-3-alt" : "Collaboration réalisée par Benjamin Beugnet Web Services et Margot Ballois pour Fincome",
-    "landing-project-4-alt" : "Collaboration réalisée par Benjamin Beugnet Web Services en tant que formateur pour Wild Code School",
-    "landing-team-title" : "Derrière Skills Room",
-    "landing-member-1-alt" : "Benjamin Beugnet Web Services, Développeur web auto-entrepreneur, expert numérique et formateur.",
-    "landing-member-2-alt" : "Margot Ballois, Développeuse web auto-entrepreneuse et experte numérique.",
-    "landing-contact-subject" : "Mon projet numérique"
+	"inputErrors" : {
+		"required": "Ce champ est obligatoire.",
+		"email": "Adresse email invalide.",
+		"phone": "Veuillez entrer un numéro de téléphone valide.",
+		"minLength": "Minimum de {{minLength}} caractère(s).",
+		"maxLength": "Maximum de {{maxLength}} caractères autorisé.",
+		"onlyLetters": "Ce champ peut seulement contenir des lettres.",
+		"incorrectSelectValue": "La valeur sélectionnée n'est pas dans le tableau des options"
+	}
 }

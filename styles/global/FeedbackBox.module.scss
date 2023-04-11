@@ -1,0 +1,20 @@
+@import "../import";
+
+.feedbackBox {
+  padding: $section-padding-mobile;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .iconContainer {
+    padding: $section-padding-mobile;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p {
+    text-align: center;
+  }
+}

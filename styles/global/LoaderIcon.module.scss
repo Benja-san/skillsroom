@@ -1,0 +1,133 @@
+@import "../import";
+
+$loader-size: 4em;
+$check-height: $loader-size/2;
+$check-width: $check-height/2;
+$check-left: ($loader-size/9 + $loader-size/12);
+$check-thickness: 3px;
+
+.circleLoader {
+  border: 2px solid rgba($tertiary-color, 0.2);
+  border-left-color: $tertiary-color;
+  animation: loader-spin 1.2s infinite linear;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 50%;
+  width: $loader-size;
+  height: $loader-size;
+}
+.loadComplete {
+  -webkit-animation: none;
+  animation: none;
+  border-color: $tertiary-color;
+  transition: border 500ms ease-out;
+  &.error {
+    border-color: $error-color;
+  }
+}
+
+
+/*--------- Checkmark CSS ---------*/
+.checkmark {
+  display: none;
+  
+  &.draw:after {
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-name: checkmark;
+    transform: scaleX(-1) rotate(135deg);
+  }
+  
+  &:after {
+    opacity: 1;
+    height: $check-height;
+    width: $check-width;
+    transform-origin: left top;
+    border-right: $check-thickness solid $tertiary-color;
+    border-top: $check-thickness solid $tertiary-color;
+    content: '';
+    left: $check-left;
+    top: $check-height;
+    position: absolute;
+  }
+}
+
+@keyframes loader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: $check-width;
+    opacity: 1;
+  }
+  40% {
+    height: $check-height;
+    width: $check-width;
+    opacity: 1;
+  }
+  100% {
+    height: $check-height;
+    width: $check-width;
+    opacity: 1;
+  }
+}
+
+/*--------- Error Cross CSS ---------*/
+.errorCross {
+  display: none;
+  width:30px;
+  height: 30px;
+  position: absolute;
+  top: 25%;
+  left: 27%;
+}
+.errorCross:before,.errorCross:after {
+  display: none;
+  content: '';
+  height:2px;
+  width:0;
+  background:$error-color;
+  transform-origin:left;
+  animation: grow 200ms linear forwards;
+  position: absolute;
+}
+.errorCross:before{
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 10%;
+  left:14%;
+}
+.errorCross:after {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  top: 10%;
+  left:82%;
+  animation-delay: 200ms;
+}
+@keyframes grow{
+  to {width:100%;}
+}
+
+.displayed, .displayed:before, .displayed:after{
+  display: block;
+  opacity: 1;
+}

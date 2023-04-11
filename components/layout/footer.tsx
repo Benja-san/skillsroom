@@ -31,7 +31,7 @@ const Footer: FunctionComponent<Props> = ({font}) => {
           )}
         </ul>
         <div>
-          <Link href="mailto:beugnet.freelance@gmail.com?subject=About my project">
+          <Link href="/contact">
             <ActionLink title="Contact" />
           </Link>
         </div>
