@@ -1,6 +1,7 @@
 import { InputFieldModel } from "@/models/InputFieldModel"
 import { FieldError } from "react-hook-form"
 import styles from "@/styles/global/InputField.module.scss"
+import { FunctionComponent } from "react"
 
 type Props = {
   inputField: InputFieldModel
@@ -9,12 +10,12 @@ type Props = {
   errorMessages: { [key: string]: string }
 }
 
-export default function InputField({
+const InputField: FunctionComponent<Props> = ({
   inputField,
   register,
   error,
   errorMessages,
-}: Props) {
+}) => {
 
   const selectValidation = (value: string) => {
     const arrayOfOptionsValue = inputField.options?.map(
@@ -111,3 +112,5 @@ export default function InputField({
     </div>
   )
 }
+
+export default InputField

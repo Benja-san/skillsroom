@@ -85,7 +85,7 @@ $check-thickness: 3px;
   }
 }
 
-/*--------- Error Crosse CSS ---------*/
+/*--------- Error Cross CSS ---------*/
 .errorCross {
   display: none;
   width:30px;
@@ -126,60 +126,6 @@ $check-thickness: 3px;
 @keyframes grow{
   to {width:100%;}
 }
-/*.errorCross {
-  display: none;
-  position: absolute;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  top: 25%;
-  left: 27%;
-}
-.errorCross:before,.errorCross:after {
-  display: none;
-  content: '';
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  top: 50%;
-  left: 0;
-  margin-top: -1px;
-  background-color: $tertiary-color;
-  opacity: 0;
-  animation-duration: 120s;
-  animation-timing-function: ease;
-}
-
-.errorCross:before{
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  animation-name: errorFirstCross;
-}
-.errorCross:after {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-@keyframes errorFirstCross {
-  0% {
-    width: 0;
-  }
-  25% {
-    width: 50%;
-  }
-  50% {
-    width: 100%;
-  }
-  100% {
-    width: 100%;
-  }
-}*/
-
 
 .displayed, .displayed:before, .displayed:after{
   display: block;

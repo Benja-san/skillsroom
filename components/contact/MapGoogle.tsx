@@ -1,8 +1,9 @@
 import { Loader } from "@googlemaps/js-api-loader"
 import { useRef, useEffect } from "react"
 import styles from "@/styles/contact/MapGoogle.module.scss"
+import { FunctionComponent } from "react"
 
-export default function MapGoogle() {
+const MapGoogle: FunctionComponent = () => {
   const googleMap = useRef(null)
 
   useEffect(() => {
@@ -34,3 +35,5 @@ export default function MapGoogle() {
 
   return <div className={styles.googleMapContainer} ref={googleMap}></div>
 }
+
+export default MapGoogle

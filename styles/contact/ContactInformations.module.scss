@@ -15,6 +15,9 @@
     padding : calc($section-padding-mobile/2) 0;
     a {
       margin-left: 10px;
+      @media screen and (min-width: 1024px) {
+        font-size: 1.1rem;
+      }
     }
   }
 }

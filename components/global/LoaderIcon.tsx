@@ -1,10 +1,11 @@
 import styles from "@/styles/global/LoaderIcon.module.scss"
+import { FunctionComponent } from "react"
 
 type Props = {
   type: "success" | "error" | "loaded" | "loading" | null | undefined
 }
 
-export default function LoaderIcon({ type }: Props) {
+const LoaderIcon: FunctionComponent<Props> = ({ type }) => {
   return (
     <div
       className={`
@@ -26,3 +27,5 @@ export default function LoaderIcon({ type }: Props) {
     </div>
   )
 }
+
+export default LoaderIcon

@@ -3,9 +3,10 @@ import EmailIcon from "@/public/icons/email.svg"
 import TelIcon from "@/public/icons/tel.svg"
 import WhatsAppIcon from "@/public/icons/whatsapp.svg"
 import MapGoogle from "./MapGoogle"
+import { FunctionComponent } from "react"
 import styles from "@/styles/contact/ContactInformations.module.scss"
 
-export default function ContactInformations() {
+const ContactInformations: FunctionComponent = () => {
   const { t } = useTranslation(["contact-page", "common"])
 
   return (
@@ -54,3 +55,5 @@ export default function ContactInformations() {
     </>
   )
 }
+
+export default ContactInformations

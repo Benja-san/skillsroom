@@ -15,27 +15,24 @@ const HomeSection: FunctionComponent<HomeSectionModel> = ({
   titleColoredPart,
 }) => {
   return (
-    console.log(link),
-    (
-      <li className={styles.homeSectionContainer}>
-        <section>
-          <div className={styles.header}>
-            <SVGIcons type={iconType} />
-            <h2>
-              {title}
-              <span>{titleColoredPart}</span>
-            </h2>
-          </div>
-          <p className={styles.content}>{content}</p>
-          <div className={styles.footer}>
-            <p>{catchPhrase}</p>
-            <Link href={link}>
-              <ActionLink title={buttonTitle} />
-            </Link>
-          </div>
-        </section>
-      </li>
-    )
+    <li className={styles.homeSectionContainer}>
+      <section>
+        <div className={styles.header}>
+          <SVGIcons type={iconType} />
+          <h2>
+            {title}
+            <span>{titleColoredPart}</span>
+          </h2>
+        </div>
+        <p className={styles.content}>{content}</p>
+        <div className={styles.footer}>
+          <p>{catchPhrase}</p>
+          <Link href={link}>
+            <ActionLink title={buttonTitle} />
+          </Link>
+        </div>
+      </section>
+    </li>
   )
 }
 

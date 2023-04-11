@@ -12,8 +12,9 @@ import { useForm, FieldError } from "react-hook-form"
 import { textWithLetterColored } from "@/helpers/utils"
 import { useState } from "react"
 import styles from "@/styles/contact/Contact.module.scss"
+import { FunctionComponent } from "react"
 
-export default function ContactPage() {
+const ContactPage: FunctionComponent = () => {
   const { t } = useTranslation(["contact-page", "common"])
   const {
     register,
@@ -128,3 +129,5 @@ export async function getStaticProps({ locale }: any) {
     },
   }
 }
+
+export default ContactPage

@@ -1,12 +1,13 @@
 import styles from "@/styles/global/FeedbackBox.module.scss"
 import LoaderIcon from "./LoaderIcon"
+import { FunctionComponent } from "react"
 
 type Props = {
   title: string
   type?: "error" | "success" | "loading" | "loaded" | null
 }
 
-export default function FeedbackBox({ title, type }: Props) {
+const FeedbackBox : FunctionComponent<Props> = ({ title, type }) => {
   return (
     <div className={styles.feedbackBox}>
       <div className={styles.iconContainer}>
@@ -16,3 +17,5 @@ export default function FeedbackBox({ title, type }: Props) {
     </div>
   )
 }
+
+export default FeedbackBox
